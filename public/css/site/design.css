@@ -1,0 +1,65 @@
+.banner {
+background-color: #DEE8F2;
+margin-top: 20px;
+margin-bottom: 20px;
+opacity: 0.4;
+}
+
+.banner-name {
+    text-align: center;
+    font-size: 40px;
+    font-family: "Courier New", Courier;
+}
+
+.karosel {
+    background-color: #F0F0F0;
+    /*padding-top: 180px;
+    padding-bottom: 180px;*/
+}
+
+.sex-pic {
+    margin-right: 30px;
+}
+
+
+@media (min-width: 769px) {
+    .col-md-6-with-gap-left {
+        margin-top: 20px;
+        background-color: lime;
+        width: 49.5%;
+    }
+}
+@media (max-width: 768px) {
+    .col-md-6-with-gap-left {
+        margin-top: 20px;
+        background-color: lime;
+        width: 100%;
+    }
+}
+.col-md-6-with-gap-left > .carousel {
+    background-color: pink;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+@media (min-width: 769px) {
+    .col-md-6-with-gap-right {
+        margin-top: 20px;
+        background-color: pink;
+        width: 49.5%;
+        margin-left: 1%;
+    }
+}
+@media (max-width: 768px) {
+    .col-md-6-with-gap-right {
+        margin-top: 20px;
+        background-color: pink;
+        width: 100%;
+        margin-left: 0;
+    }
+}
+.col-md-6-with-gap-right > .carousel {
+    background-color: lime;
+    margin-right: -15px;
+    margin-right: -15px;
+}

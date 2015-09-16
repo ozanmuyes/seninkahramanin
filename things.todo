@@ -1,0 +1,30 @@
+Now
+
+  ✔ Decide and create tables (migrations, seeders and models) @done (15-08-30 06:00)
+  ✘ Add mobile number to users table @cancelled (15-08-30 06:00)
+  ✔ Cart system @done (15-09-03 12:07)
+  ☐ Login/register with Twitter/Facebook - twit attırmaya ve/veya sayfayı beğendirmeye yönelt
+  ☐ AuthController@getSocialAuthCallback
+
+Next
+
+  ☐ Register and login via Facebook
+  ✘ Instagram gather photos with specific tags (https://github.com/vinkla/instagram) @cancelled (15-08-28 07:14)
+  ☐ E-mail to related user when the order status changed
+  ☐ Use "strict" mode when changing order status
+  ☐ Populate Owl partial's options http://owlgraphic.com/owlcarousel/
+
+Later
+
+  ☐ Automatically create various sizes of uploaded profile picture and use them in admin panel
+  ☐ Complete permissions table and assign them to roles
+
+Before Release
+
+  ☐ Do tweaking
+  ☐ Cache routes
+  ☐ Include only once partial CSSs and JSs
+
+After Release
+
+  ☐ Google Webmaster Tools registration

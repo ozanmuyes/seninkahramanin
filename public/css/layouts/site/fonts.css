@@ -1,0 +1,20 @@
+/*@font-face{
+    font-family: 'Amatic';
+    src: url('../../fonts/AmaticSC-Regular.eot');
+    src: url('../../fonts/AmaticSC-Regular.eot?iefix') format('eot'),
+         url('../../fonts/AmaticSC-Regular.woff') format('woff'),
+         url('../../fonts/AmaticSC-Regular.ttf') format('truetype'),
+         url('../../fonts/AmaticSC-Regular.svg#webfont') format('svg');
+}*/
+
+@font-face{
+    font-family: 'Amatic Regular';
+    src: url('../../../fonts/AmaticSC-Regular.ttf');
+}
+
+@font-face{
+    font-family: 'Amatic Bold';
+    src: url('../../../fonts/Amatic-Bold.ttf');
+}
+
+

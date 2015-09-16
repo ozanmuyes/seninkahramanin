@@ -1,0 +1,171 @@
+/* For mobile:like samsung grand(480 * 800): */
+@media screen and (max-width:480px) {
+  .get-started-btn { padding: 20px 50px; }
+}
+/* For iphone: */
+@media screen and (max-width:320px) {
+}
+/* For ipad: */
+@media screen and (max-width:760px) {
+}
+@media screen and (max-width:991px) {
+  .download-now { background: #e8b968; background-image: none; }
+  .features-leftcol { border: none; padding: 0 0 0 20px; }
+  .features-rightcol { padding: 0 0 0 20px; }
+  .margin-bottom { margin-bottom: 0; }
+  .features p { margin-bottom: 50px; }
+}
+
+.flat-box {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 3px 0px 0px rgba(234, 234, 234, 1);
+  -moz-box-shadow: 0px 3px 0px 0px rgba(234, 234, 234, 1);
+  box-shadow: 0px 3px 0px 0px rgba(234, 234, 234, 1);
+  transition: all 0.5s ease; -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease;
+}
+
+.flat-box:hover, .flat-box:focus {
+  transform: translate(0, -15px);
+  -webkit-transform: translate(0, -15px);
+  -o-transform: translate(0, -15px);
+  -moz-transform: translate(0, -15px);
+}
+
+.guiderow{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.controlsud{
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.controls-medium{
+  text-align: right;
+}
+
+.guide-text{
+  margin-top: 40px;
+  text-align: center;
+}
+
+.colourway {
+height: 346px;
+}
+
+.colour1 {
+background-color: #B0F4B0;
+}
+
+.colour2 {
+background-color: #80C8FF;
+}
+
+.colour3 {
+background-color: #7accc8;
+}
+
+.colour4 {
+background-color: #373b44;
+}
+
+.title {
+font-size: 15px;
+color: #9197a8;
+text-transform: uppercase;
+font-weight: 600;
+letter-spacing: 2px;
+padding: 20px 40px 0;
+}
+
+.feature-text {
+padding: 0px 20px 40px 40px;
+font-style: italic;
+color: #7a8387;
+font-size: 16px;
+}
+
+.design-content p {
+  color: #abbcc3;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.design h1 {
+color: #abbcc3;
+font-size: 38px;
+font-weight: 300;
+margin-top: 0;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+.design {
+padding: 100px 0;
+background-color: #f6f6f4;
+position: relative;
+}
+
+nav ul {
+list-style: none; padding: 0;
+}
+
+nav ul li a {
+color: rgba(255, 255, 255, 0.6);
+padding: 20px; display: block;
+border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease;
+padding-left: 0;
+position: relative;
+}
+
+dl, menu, ol, ul {
+margin: 1em 0;
+}
+
+.controlsud a {
+color: #959595;
+transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-webkit-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+}
+
+
+.controlsud a:hover, .controls a:focus {
+  color: #555555;
+}
+
+.controlsud .prev {
+margin-right: 5px;
+}
+
+.controlsud .next {
+margin-left: 5px;
+}
+
+.controls-medium a {
+color: #959595;
+transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-webkit-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+}
+
+.controls-medium a:hover, .controls a:focus{
+color: #555555;
+}
+
+.controls-medium .prev {
+margin-right: 5px;
+}
+
+.controls-medium .next {
+margin-left: 5px;
+}
