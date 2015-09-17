@@ -5,12 +5,6 @@ body {
   background-image: url("../../../img/bggreen.png");
 }
 
-/*
-===============================================
-11. Cart Page
-===============================================
-*/
-
 /* Cart Ican and Text stay in one line */
 @media (max-width: 768px) {
   .img-bow-center-res {
@@ -19,19 +13,19 @@ body {
   }
 }
 
-/* Outer Border of all table */
+/* Outer Border of all table cart */
 .table-bow {
   border: solid 2px #d6d6d6;
 }
 
-/* Outer Border of all table */
+/* Outer Border of all table cart */
 .text-cart-bow {
   width: 100%;
   display: inline-block;
   margin-left: 0px;
 }
 
-/* Outer Border of all table */
+/* Outer Border of all table cart */
 @media (min-width: 768px) {
   .text-cart-bow {
     width: 70%;
@@ -39,7 +33,7 @@ body {
   }
 }
 
-/* Size of the product image */
+/* Size of the product image cart */
 .img-cart-bow {
   max-width: 110px;
   display: inline-block;
@@ -48,7 +42,7 @@ body {
   margin-top: 10px;
 }
 
-/* Price And Coupon div */
+/* Price And Coupon div cart */
 .total-page {
   background-color: #f5f5f5;
   border: solid 1px #d6d6d6;
@@ -56,13 +50,13 @@ body {
   padding: 15px;
 }
 
-/* Total Price text */
+/* Total Price text cart */
 .total-price-bow h1 {
   font-size: 20px;
   letter-spacing: 0px;
 }
 
-/* Cart page - product icon fit */
+/* Cart page - product icon fit cart */
 .img-full-size {
   width: 100%;
 }

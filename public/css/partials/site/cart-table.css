@@ -3,6 +3,10 @@
     margin-bottom: 30px;
 }
 
+.product-div tbody {
+	background-color: #FFFFFF;
+}
+
 .th-green{
     background-color: #E8F8E5;
 }
