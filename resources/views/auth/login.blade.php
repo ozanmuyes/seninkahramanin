@@ -25,10 +25,7 @@
                 {!! Form::open(["class" => "form-login"]) !!}
                     BURAYA LOGO(!) GELECEK
 
-                    <div class="form-group">
-                        {!! Html::link(route("Login.Provider", "facebook"), "Facebook", ["class" => "btn btn-primary btn-block"]) !!}
-                        {!! Html::link(route("Login.Provider", "twitter"), "Twitter", ["class" => "btn btn-primary btn-block"]) !!}
-                    </div>
+                   
 
                     <div class="form-group">
                         {!! Form::label("email", "E-Mail Adresiniz") !!}
@@ -47,6 +44,12 @@
                     </div>
 
                     {!! Form::submit("Giriş", ["class" => "btn btn-lg btn-primary btn-block"]) !!}
+
+                     <div class="form-group">
+                        {!! Html::link(route("Login.Provider", "facebook"), "Facebook", ["class" => "btn btn-primary btn-block"]) !!}
+                        {!! Html::link(route("Login.Provider", "twitter"), "Twitter", ["class" => "btn btn-primary btn-block"]) !!}
+                    </div>
+
                 {!! Form::close() !!}
 
                 {!! link_to("/kullanici/sifremi-unuttum", "Şifremi Unuttum") !!}
