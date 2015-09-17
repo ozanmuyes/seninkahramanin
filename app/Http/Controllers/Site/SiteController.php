@@ -49,15 +49,30 @@ class SiteController extends Controller
         $productId = mt_rand(1, 12);
         $quantity = mt_rand(1, 7);
 
-        $product = App\Product::with("prices")->where(["id" => $productId])->first();
-        $productArr = $product->toArray();
-        $productArr["price"] = $product->price->withoutCurrency;
-        $productArr["quantity"] = $quantity;
-        unset($productArr["prices"]);
+        $product = App\Product::with(["prices", "images"])->where(["id" => $productId])->first();
 
-        Cart::add($productArr);
+        Cart::add(
+            $product->id,
+            $product->name,
+            $product->price->withoutCurrency,
+            $quantity,
+            [
+                "currency" => $product->price->currency,
+                "image" => [
+                    // "path" => count($product->images) > 0
+                    //     ? $product->images[0]->path
+                    //     : null,
+                    "path" => "img/product1.jpg",
+                    "alt" => count($product->images) > 0
+                        ? $product->images[0]->alt
+                        : null,
+                ],
+                "sex" => $product->sex
+            ],
+            []
+        );
 
-        Flash::success("Product '" . $productArr["name"] . "' added to cart.");
+        Flash::success("Product '" . $product->name . "' added to cart.");
 
         return redirect(route("Site.Index"));
     }

@@ -13,9 +13,19 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .navbar-collapse {
+    background-color: #E8F8E5;
+  }
+}
+
 /* Outer Border of all table cart */
-.table-bow {
+.table {
   border: solid 2px #d6d6d6;
+}
+
+.table-cart {
+  margin-bottom: 0;
 }
 
 /* Outer Border of all table cart */
@@ -45,7 +55,7 @@ body {
 /* Price And Coupon div cart */
 .total-page {
   background-color: #f5f5f5;
-  border: solid 1px #d6d6d6;
+  border: solid 2px #d6d6d6;
   border-top: transparent;
   padding: 15px;
 }
@@ -66,13 +76,6 @@ a {
 }
 a:hover {
   color: #101010;
-}
-
-/* Navbar stays in container */
-@media (min-width: 992px) {
-  .container {
-    width: 960px;
-  }
 }
 
 /* Activated link BG */
@@ -105,7 +108,8 @@ a:hover {
 
 /* Padding to bottom of navbar */
 section {
-  padding: 45px 0;
+  padding-top: 45px;
+  padding-bottom: 45px;
 }
 
 .carousel-control.left,
@@ -126,12 +130,20 @@ nav, .footer-text {
 }
 
 /* Navbar Font Size */
-.navbar-nav, nav, a, .footer-text {
+.navbar-nav, nav, .footer-text {
   font-size: 24px;
+}
+
+.container-fluid a {
+  color: #5cb85c;
 }
 
 .footer-img {
   background-color: #E8F8E5;
+}
+
+footer {
+  margin-top: 80px;
 }
 
 /* Photo Guide stays other navbar links disappears!? */
@@ -142,4 +154,17 @@ nav, .footer-text {
 /* Logo size */
 a.navbar-brand {
   font-size: 36px;
+}
+
+section > h1 {
+  margin-bottom: 30px;
+}
+
+.badge {
+  border-radius: 0;
+  font-family: sans-serif;
+}
+
+ul.slides {
+  list-style: none;
 }

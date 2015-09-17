@@ -21,9 +21,7 @@ class CartController extends Controller
      */
     public function index()
     {
-        return view("site.cart");
-
-        return Cart::getContent();
+        return view("site.cart")->with("products", Cart::getContent());
     }
 
     /**
@@ -90,13 +88,7 @@ class CartController extends Controller
      */
     public function add($id, $quantity = 1)
     {
-        $product = Product::find($id);
-        $product["quantity"] = intval($quantity);
-
-        // Event::fire(new ProductAddingToCart($product));
-        Cart::add($product->toArray());
-
-        return redirect()->route("Cart.Index");
+        // Refer to SiteController@guide
     }
 
     /**

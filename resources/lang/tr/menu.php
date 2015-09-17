@@ -2,7 +2,7 @@
 
 return [
     "index" => "Anasayfa",
-    "guide" => "Resim Seçme Rehberi",
+    "guide" => "Fotoğraf Seçme Rehberi",
     "design" => "Tasarla",
     "about_us" => "Hakkımızda",
     "contact_us" => "İletişim",

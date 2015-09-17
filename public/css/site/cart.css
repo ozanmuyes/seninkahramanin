@@ -1,5 +1,16 @@
-.odeme-tamamla
-{
-    margin-top: 5px;
-    margin-bottom: 40px;
+.btn-checkout {
+    margin-top: 10px;
+    margin-right: 14px;
+}
+
+section.cart thead {
+    background-color: #E8F8E5;
+}
+
+section.cart tbody {
+    background-color: #FFFFFF;
+}
+
+.total-page {
+    background-color: #E8F8E5;
 }
