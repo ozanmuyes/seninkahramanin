@@ -13,6 +13,14 @@ body {
     }
 }
 
+.navbar-brand-bow ul a {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
 @media (max-width: 768px) {
     .navbar-collapse {
         background-color: #E8F8E5;
@@ -81,6 +89,10 @@ a:hover {
 /* Activated link BG */
 .navbar-nav li.active a {
     background-color: #F8F8F8;
+}
+
+.navbar-nav li.active a:focus {
+    background-color: inherit;
 }
 
 /* Correct class name... surprisingly */
