@@ -11,6 +11,7 @@ use Auth;
 
 use Socialite;
 use Flash;
+use Session;
 
 class AuthController extends Controller
 {
@@ -94,6 +95,10 @@ class AuthController extends Controller
 
     protected function redirectPath()
     {
+        if (Session::has("intended")) {
+            return route(Session::get("intended"));
+        }
+
         if (Auth::user()->is(["admin", "developer"])) {
             return route("Admin.Index");
         }

@@ -47,11 +47,11 @@
                 @else
                     <li>
                         {{-- <a href="{{ route('Login.Provider', 'facebook') }}">{{ trans("menu.login") }}</a> --}}
-                        <a href="{{ route('Login.Index') }}">{{ trans("menu.login") }}</a>
+                        <a href="{{ route('Login') }}">{{ trans("menu.login") }}</a>
                     </li>
 
                     <li>
-                        <a href="{{ route('Register.Index') }}">{{ trans("menu.register") }}</a>
+                        <a href="{{ route('Register') }}">{{ trans("menu.register") }}</a>
                     </li>
                 @endif
             </ul>

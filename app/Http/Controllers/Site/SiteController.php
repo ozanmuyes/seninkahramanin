@@ -42,10 +42,10 @@ class SiteController extends Controller
      */
     public function guide()
     {
-        return view("site.guide");
+        // return view("site.guide");
 
         // For test purposes add random product at random quantity to the cart
-
+        //
         $productId = mt_rand(1, 12);
         $quantity = mt_rand(1, 7);
 

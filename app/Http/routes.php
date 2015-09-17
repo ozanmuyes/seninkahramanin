@@ -24,11 +24,10 @@ Route::get("cart/clear", function () {
 
 Route::group(
     [
-        "prefix" => "kayit",
-        "as" => "Register."
+        "prefix" => "kayit"
     ],
     function () {
-        Route::get("/", ["as" => "Index", "uses" => "Auth\AuthController@getRegister"]);
+        Route::get("/", ["as" => "Register", "uses" => "Auth\AuthController@getRegister"]);
         Route::post("/", "Auth\AuthController@postRegister");
 
         Route::group(
@@ -36,7 +35,7 @@ Route::group(
                 "prefix" => "{provider}"
             ],
             function () {
-                Route::get("/", ["as" => "Provider", "uses" => "Auth\AuthController@getSocialAuth"]);
+                Route::get("/", ["as" => "Register.Provider", "uses" => "Auth\AuthController@getSocialAuth"]);
                 Route::get("callback", ["uses" => "Auth\AuthController@getSocialAuthCallback"]);
             }
         );
@@ -45,18 +44,17 @@ Route::group(
 
 Route::group(
     [
-        "prefix" => "giris",
-        "as" => "Login."
+        "prefix" => "giris"
     ],
     function () {
-        Route::get("/", ["as" => "Index", "uses" => "Auth\AuthController@getLogin"]);
+        Route::get("/", ["as" => "Login", "uses" => "Auth\AuthController@getLogin"]);
 
         Route::group(
             [
                 "prefix" => "{provider}"
             ],
             function () {
-                Route::get("/", ["as" => "Provider", "uses" => "Auth\AuthController@getSocialAuth"]);
+                Route::get("/", ["as" => "Login.Provider", "uses" => "Auth\AuthController@getSocialAuth"]);
                 Route::get("callback", ["uses" => "Auth\AuthController@getSocialAuthCallback"]);
             }
         );
@@ -104,7 +102,8 @@ Route::group(
 
                 Route::get("clear", ["as" => "Clear", "uses" => "CartController@clear"]);
 
-                Route::get("ode", ["as" => "Checkout", "uses" => "CartController@checkout"]);
+                Route::get("ode", ["as" => "Checkout", "uses" => "CartController@getCheckout"]);
+                Route::post("ode", ["uses" => "CartController@postCheckout"]);
             }
         );
 

@@ -7,10 +7,11 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use Cart;
 use App\Product;
-use Event;
-use App\Events\ProductAddingToCart;
+
+use Cart;
+use Auth;
+use Session;
 
 class CartController extends Controller
 {
@@ -101,5 +102,21 @@ class CartController extends Controller
         Cart::clear();
 
         return redirect()->route("Cart.Index");
+    }
+
+    public function getCheckout()
+    {
+        if (Auth::check()) {
+            return view("site.checkout");
+        } else {
+            Session::put("intended", "Site.Cart.Checkout");
+
+            return redirect()->route("Login");
+        }
+    }
+
+    public function postCheckout(Request $request)
+    {
+dd($request);
     }
 }

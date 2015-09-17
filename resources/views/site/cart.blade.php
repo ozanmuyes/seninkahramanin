@@ -89,11 +89,15 @@
                         </div>
 
                         <div class="row">
-                            <button type="button" class="btn btn-success btn-lg pull-right btn-checkout">Ödemeyi Tamamla</button>
+                            {!! Html::link(route("Site.Cart.Checkout"), "Öde", ["class" => "btn btn-success btn-lg pull-right btn-checkout"]) !!}
                         </div>
                     </div>
                 @else
-                    <p>Sepetiniz boş. Ürün tasarlamaya karar verirseniz <a href="{{ route('Site.Design') }}">Tasarla</a> sayfasına gidebilirsiniz.</p>
+                    <p>
+                        Sepetiniz boş. Ürün tasarlamaya karar verirseniz
+                        <a href="{{ route('Site.Design') }}">Tasarla</a>
+                        sayfasına gidebilirsiniz.
+                    </p>
                 @endif
             </section>
         </div>
