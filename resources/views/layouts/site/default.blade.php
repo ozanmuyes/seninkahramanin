@@ -13,6 +13,7 @@
         {!! Html::style('css/layouts/font-awesome.min.css') !!}
         {!! Html::style('css/layouts/site/default.css') !!}
         {!! Html::style('css/layouts/site/fonts.css') !!}
+        {!! Html::style('css/layouts/site/bootstrap-social.css') !!}
 
         <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Advent+Pro:500&subset=latin-ext,latin' rel='stylesheet' type='text/css'>

@@ -34,6 +34,10 @@ hr {
 }
 
 .about-form{
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+
+a {
+  color: #439D4E;
 }

@@ -50,13 +50,13 @@
                         {!! Form::password("password", ["class" => "form-control input-lg", "required" => true]) !!}
                     </div>
 
-                    <div id="remember" class="checkbox">
-                        <label>
-                            {!! Form::checkbox("remember", null, false) !!} Beni hatırla
-                        </label>
+                    <div class="form-group">
+                      {!! Form::label("password", "Sipariş Teslim Adresiniz") !!}  
+                      <textarea name="InputMessage" class="form-control" rows="5" required></textarea>
+                      
                     </div>
 
-                    {!! Form::submit("Siparişi Tamamla", ["class" => "btn btn-lg btn-primary btn-block"]) !!}
+                    {!! Form::submit("Siparişi Tamamla", ["class" => "btn btn-lg btn-success btn-block"]) !!}
                 {!! Form::close() !!}
             </section>
         </div>

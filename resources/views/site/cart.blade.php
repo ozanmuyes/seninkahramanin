@@ -30,6 +30,7 @@
                                 <th>Adet</th>
                                 <th>Fiyat</th>
                                 {{-- <th>Durum</th> --}}
+                                <th>Temizle</th>
                             </tr>
                         </thead>
 
@@ -55,7 +56,16 @@
                                     <td>{{ $product["quantity"] }}</td>
                                     <?php $total += $product["price"]; ?>
                                     <td>{{ $product["price"] . " " . mb_strtoupper($product["attributes"]["currency"]) }}</td>
+
+                                    <td>
+                                        <button type="button" class="btn btn-default btn-sm">
+                                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                        </button>
+                                    </td>
+
+
                                     {{-- <td>Siparis</td> --}}
+
                                 </tr>
                             @endforeach
                         </tbody>
@@ -69,8 +79,10 @@
                                         <input type="text" placeholder="Kupon Kodu" class="form-control form-bow">
                                     </div>
 
-                                    {!! Form::submit("Uygula", ["class" => "btn btn-success"]) !!}
+                                    <br><br>
 
+                                    {!! Form::submit("Uygula", ["class" => "btn btn-success"]) !!}
+                                    
                                     <p class="help-block">Varsa indirim kuponu kodunuzu girin.</p>
                                 {!! Form::close() !!}
                             </div>
@@ -103,7 +115,6 @@
         </div>
     </div>
 
-    {{-- @include("partials.site.cart-table") --}}
 @endsection
 
 @section("styles")

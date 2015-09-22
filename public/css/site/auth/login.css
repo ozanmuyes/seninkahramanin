@@ -46,12 +46,13 @@ form.form-login {
     form.form-login img {
         display: block;
         margin: 0 auto;
-        margin-bottom: 35px;
+       
     }
     form.form-login input,
     form.form-login button {
-        font-size: 18px;
+        font-size: 24px;
         margin: 16px 0;
+        font-family: 'Amatic Regular', Arial, Helvetica, sans-serif;
     }
     form.form-login > div {
         text-align: center;
@@ -73,6 +74,14 @@ form.form-login {
     padding-bottom: 20px;
     padding-top: 15px;
 }
+
+
+
+
+
+
+
+
 
 
 

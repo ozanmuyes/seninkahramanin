@@ -72,6 +72,9 @@ form.form-login {
         color: #fff;
     }
 
-
+.form-group {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
 
 

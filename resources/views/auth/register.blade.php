@@ -25,13 +25,18 @@
                 {!! Form::open(["class" => "form-login"]) !!}
                     BURAYA LOGO(!) GELECEK
 
+
                     {!! Form::hidden("twitter_id", $user["twitter_id"]) !!}
                     {!! Form::hidden("facebook_id", $user["facebook_id"]) !!}
 
+                    {{-- 
                     <div class="form-group">
                         {!! Html::link(route("Register.Provider", "facebook"), "Facebook", ["class" => "btn btn-primary btn-block"]) !!}
                         {!! Html::link(route("Register.Provider", "twitter"), "Twitter", ["class" => "btn btn-primary btn-block"]) !!}
                     </div>
+                    --}}
+
+
 
                     <div class="form-group">
                         {!! Form::label("first_name", "Adınız") !!}
@@ -63,12 +68,18 @@
                         {!! Form::password("password_confirmation", ["id" => "inputPassword", "class" => "form-control", "required" => true]) !!}
                     </div>
 
+
+
                     {!! Form::submit("Kayıt Ol", ["class" => "btn btn-lg btn-success btn-block"]) !!}
+
+                    <div id="remember" class="checkbox">
+                        <label>
+                            {!! Form::checkbox("remember", null, false) !!} Beni hatırla
+                        </label>
+                    </div>
+
                 {!! Form::close() !!}
 
-                {!! link_to("/kullanici/sifremi-unuttum", "Şifremi Unuttum") !!}
-                <br>
-                {!! link_to("/kayit", "Kayıt Ol") !!}
             </section>
         </div>
     </div>

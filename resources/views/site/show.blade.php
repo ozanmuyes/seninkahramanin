@@ -3,7 +3,12 @@
 @section("title", trans("menu.my_profile"))
 
 @section("content")
-    {{ $user->name }}
+	<br>
+    Hoş geldiniz {{ $user->name }} !
     <br>
-    my profile - profilim
+
+    <h1>Önceki Alışverişleriniz</h1>
+
+    
+    
 @endsection
