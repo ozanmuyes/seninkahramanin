@@ -17,6 +17,7 @@
 
         <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Advent+Pro:500&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 
         <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
         <script type="text/javascript">
