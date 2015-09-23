@@ -9,6 +9,8 @@ use App\Http\Controllers\Controller;
 
 use App\User;
 
+use Auth;
+
 class UsersController extends Controller
 {
     /**

@@ -41,7 +41,7 @@
                     @foreach($orders as $order)
                         <tr>
                             <td>{{ $order->id }}</td>
-                            <td><a href="{{ route('Admin.Users.Show', ['slug' => $order->address->user->username, '#siparisler']) }}" title="Kullanıcı özeti">{{ $order->address->user->name }}</a></td>
+                            <td><a href="{{ route('Admin.Users.Show', ['slug' => $order->address->user->username]) . '#siparisler' }}" title="Kullanıcının tüm siparişlerini gör">{{ $order->address->user->name }}</a></td>
                             {{-- <td>{{ $order->address }}</td>
                             <td>{{ $order->getStatusAsString }}</td>
                             <td>{{ "order->cargoStatus" }}</td>

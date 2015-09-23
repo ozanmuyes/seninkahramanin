@@ -13,8 +13,14 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        // 'App\Events\SomeEvent' => [
-        //     'App\Listeners\EventListener',
+        // // 'App\Events\SomeEvent' => [
+        // //     'App\Listeners\EventListener',
+        // // ],
+        // "Ozanmuyes\Cart\Events\CartCreated" => [
+        //     "App\Listeners\CartCreatedListener",
+        // ],
+        // "Ozanmuyes\Cart\Events\ItemsAdded" => [
+        //     "App\Listeners\ItemsAddedListener",
         // ],
     ];
 
@@ -23,9 +29,9 @@ class EventServiceProvider extends ServiceProvider
      *
      * @var array
      */
-    protected $subscribe = [
-        "App\Listeners\CartListener",
-    ];
+    // protected $subscribe = [
+    //     "App\Listeners\CartListener",
+    // ];
 
     /**
      * Register any other events for your application.

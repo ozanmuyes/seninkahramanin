@@ -157,7 +157,7 @@ return [
         Cviebrock\EloquentSluggable\SluggableServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
         Cocur\Slugify\Bridge\Laravel\SlugifyServiceProvider::class,
-        Darryldecode\Cart\CartServiceProvider::class,
+        Ozanmuyes\Cart\CartServiceProvider::class,
         Artisaninweb\SoapWrapper\ServiceProvider::class,
         Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
 
@@ -218,7 +218,7 @@ return [
         'Breadcrumbs' => DaveJamesMiller\Breadcrumbs\Facade::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Slugify'   => Cocur\Slugify\Bridge\Laravel\SlugifyFacade::class,
-        'Cart'      => Darryldecode\Cart\Facades\CartFacade::class,
+        'Cart'      => Ozanmuyes\Cart\Facades\CartFacade::class,
         'SoapWrapper' => Artisaninweb\SoapWrapper\Facades\SoapWrapper::class,
         'LaravelLocalization' => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
 
