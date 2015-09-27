@@ -12,10 +12,10 @@
 .right{
     text-align: right;
     font-style: italic;
-    color: #979797;
 }
 
 .about-motto{
+    font-family: 'Poiret One', cursive;
     color: black;
     font-style: italic;
     text-align: center;
