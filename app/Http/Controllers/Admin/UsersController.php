@@ -75,7 +75,13 @@ class UsersController extends Controller
      */
     public function edit($username)
     {
-        //
+        $user = User::where(["username" => $username])->with(["orders"])->first();
+
+        if ($user === null) {
+            return abort(404);
+        }
+
+        return view("admin.users.edit")->with("user", $user);
     }
 
     /**

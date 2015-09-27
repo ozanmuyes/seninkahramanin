@@ -23,6 +23,11 @@ Breadcrumbs::register("admin.users.create", function($breadcrumbs) {
     $breadcrumbs->push("Kullanıcılar", route("Admin.Users.Index"));
     $breadcrumbs->push("Yeni Kullanıcı", route("Admin.Users.Create"));
 });
+Breadcrumbs::register("admin.users.edit", function($breadcrumbs) {
+    $breadcrumbs->parent("admin.index");
+    $breadcrumbs->push("Kullanıcılar", route("Admin.Users.Index"));
+    $breadcrumbs->push("Kullanıcı Düzenle", route("Admin.Users.Create"));
+});
 
 Breadcrumbs::register("admin.orders.index", function($breadcrumbs) {
     $breadcrumbs->parent("admin.index");

@@ -38,7 +38,7 @@
 
                     <li class="{{ Active::route('Admin.Users.Create') }}">
                         <a href="{{ route('Admin.Users.Create') }}">
-                            <i class="fa fa-fw fa-plus"></i>&nbsp;
+                            <i class="fa fa-fw fa-user-plus"></i>&nbsp;
                             Yeni Kullanıcı
                         </a>
                     </li>

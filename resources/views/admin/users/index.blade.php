@@ -36,7 +36,7 @@
                 <tbody>
                     @foreach($users as $user)
                         <tr>
-                            <td><a href="{{ route('Site.Users.Profile', ['slug' => $user->username]) }}" title="Profilini sitede görüntüle">{{ $user->name }}</a></td>
+                            <td><a href="{{ route('Site.Users.Show', ['slug' => $user->username]) }}" title="Profilini sitede görüntüle">{{ $user->name }}</a></td>
                             <td>{{ $user->username }}</td>
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->created_at }}</td>

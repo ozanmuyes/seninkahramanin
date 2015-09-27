@@ -48,6 +48,7 @@ Route::group(
     ],
     function () {
         Route::get("/", ["as" => "Login", "uses" => "Auth\AuthController@getLogin"]);
+        Route::post("/", ["uses" => "Auth\AuthController@postLogin"]);
 
         Route::group(
             [
@@ -60,8 +61,6 @@ Route::group(
         );
     }
 );
-
-Route::post("giris", "Auth\AuthController@postLogin");
 
 Route::post("cikis", ["as" => "Logout", "uses" => "Auth\AuthController@getLogout"]);
 
@@ -104,6 +103,18 @@ Route::group(
 
                 Route::get("ode", ["as" => "Checkout", "uses" => "CartController@getCheckout"]);
                 Route::post("ode", ["uses" => "CartController@postCheckout"]);
+            }
+        );
+
+        Route::group(
+            [
+                "prefix" => "kullanicilar",
+                "as" => "Users."
+            ],
+            function () {
+                // Route::get("/", ["as" => "Index", "uses" => "UsersController@index"]);
+
+                Route::get("{username}", ["as" => "Show", "uses" => "UsersController@show"]);
             }
         );
 
