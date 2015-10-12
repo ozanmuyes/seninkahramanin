@@ -65,7 +65,7 @@ class SiteController extends Controller
      */
     public function guide()
     {
-        // return view("site.guide");
+        return view("site.guide");
 
         // For test purposes add random product at random quantity to the cart
         //
