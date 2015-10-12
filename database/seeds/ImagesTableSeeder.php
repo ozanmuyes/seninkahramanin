@@ -39,12 +39,104 @@ class ImagesTableSeeder extends Seeder
             ],
             [
                 "directory" => "users",
+                "name" => "mutlu-erdem-48",
+                "extension" => "jpg",
+                "title" => null,
+                "alt" => "Mutlu Erdem Küçük Profil Fotoğrafı",
+                "width" => 48,
+                "height" => 48,
+                "size" => 13954,
+                "user" => [
+                    "id" => 1
+                ],
+                "slider" => [
+                    "id" => null,
+                    "order" => null,
+                    "title" => null,
+                    "subtitle" => null,
+                    "link" => null
+                ],
+                "product" => [
+                    "id" => null
+                ]
+            ],
+            [
+                "directory" => "users",
+                "name" => "mutlu-erdem-256",
+                "extension" => "jpg",
+                "title" => null,
+                "alt" => "Mutlu Erdem Büyük Profil Fotoğrafı",
+                "width" => 256,
+                "height" => 256,
+                "size" => 36099,
+                "user" => [
+                    "id" => 1
+                ],
+                "slider" => [
+                    "id" => null,
+                    "order" => null,
+                    "title" => null,
+                    "subtitle" => null,
+                    "link" => null
+                ],
+                "product" => [
+                    "id" => null
+                ]
+            ],
+            [
+                "directory" => "users",
                 "name" => "ozan-muyesseroglu",
                 "extension" => "jpg",
                 "title" => null,
                 "alt" => "Ozan Müyesseroğlu Profil Fotoğrafı",
                 "width" => 128,
                 "height" => 128,
+                "size" => 24452,
+                "user" => [
+                    "id" => 2
+                ],
+                "slider" => [
+                    "id" => null,
+                    "order" => null,
+                    "title" => null,
+                    "subtitle" => null,
+                    "link" => null
+                ],
+                "product" => [
+                    "id" => null
+                ]
+            ],
+            [
+                "directory" => "users",
+                "name" => "ozan-muyesseroglu-48",
+                "extension" => "jpg",
+                "title" => null,
+                "alt" => "Ozan Müyesseroğlu Küçük Profil Fotoğrafı",
+                "width" => 48,
+                "height" => 48,
+                "size" => 14112,
+                "user" => [
+                    "id" => 2
+                ],
+                "slider" => [
+                    "id" => null,
+                    "order" => null,
+                    "title" => null,
+                    "subtitle" => null,
+                    "link" => null
+                ],
+                "product" => [
+                    "id" => null
+                ]
+            ],
+            [
+                "directory" => "users",
+                "name" => "ozan-muyesseroglu-256",
+                "extension" => "jpg",
+                "title" => null,
+                "alt" => "Ozan Müyesseroğlu Profil Fotoğrafı",
+                "width" => 256,
+                "height" => 256,
                 "size" => 37568,
                 "user" => [
                     "id" => 2
@@ -60,7 +152,6 @@ class ImagesTableSeeder extends Seeder
                     "id" => null
                 ]
             ],
-
             [
                 "directory" => null,
                 "name" => "foo",

@@ -16,7 +16,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Carbon::setLocale("tr");
+        Carbon::setToStringFormat("d.m.Y H:i:s");
 
         Slugify::addRule("ç", "c");
         Slugify::addRule("ğ", "g");

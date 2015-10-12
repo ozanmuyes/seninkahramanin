@@ -82,7 +82,7 @@
                                     <br><br>
 
                                     {!! Form::submit("Uygula", ["class" => "btn btn-success"]) !!}
-                                    
+
                                     <p class="help-block">Varsa indirim kuponu kodunuzu girin.</p>
                                 {!! Form::close() !!}
                             </div>

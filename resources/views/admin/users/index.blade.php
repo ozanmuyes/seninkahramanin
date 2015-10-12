@@ -13,9 +13,10 @@
             <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                 <thead>
                     <tr>
-                        <th>Adı ve Soyadı</th>
-                        <th>Kullanıcı Adı</th>
+                        <th>İsmi ve Soyismi</th>
+                        <th>Kullanıcı İsmi</th>
                         <th>E-Mail Adresi</th>
+                        <th>Rolü</th>
                         <th>Oluşturulma Tarihi</th>
                         <th>Değiştirilme Tarihi</th>
                         <th>İşlemler</th>
@@ -24,9 +25,10 @@
 
                 <tfoot>
                     <tr>
-                        <th>Adı ve Soyadı</th>
-                        <th>Kullanıcı Adı</th>
+                        <th>İsmi ve Soyismi</th>
+                        <th>Kullanıcı İsmi</th>
                         <th>E-Mail Adresi</th>
+                        <th>Rolü</th>
                         <th>Oluşturulma Tarihi</th>
                         <th>Değiştirilme Tarihi</th>
                         <th>İşlemler</th>
@@ -36,9 +38,10 @@
                 <tbody>
                     @foreach($users as $user)
                         <tr>
-                            <td><a href="{{ route('Site.Users.Show', ['slug' => $user->username]) }}" title="Profilini sitede görüntüle">{{ $user->name }}</a></td>
+                            <td><a href="{{ route('Admin.Users.Show', ['slug' => $user->username]) }}" title="Kullanıcının profilini görüntüle">{{ $user->name }}</a></td>
                             <td>{{ $user->username }}</td>
                             <td>{{ $user->email }}</td>
+                            <td>{{ trans("roles." . $user->roles->first()->slug) }}</td>
                             <td>{{ $user->created_at }}</td>
                             <td>{{ $user->updated_at }}</td>
                             <td>
@@ -98,9 +101,10 @@
                     null,
                     null,
                     null,
+                    null,
                     { "orderable": false }
                 ],
-                "order": [[ 3, "desc" ]]
+                "order": [[ 4, "desc" ]]
             });
         });
 
@@ -114,7 +118,7 @@
 
             bootbox.confirm({
                 title: "Duyuru Sil",
-                message: "'" + $this.data("bootboxTitle") + "'<br>isimli kullanıcıyı silmek istediğinize emin misiniz?",
+                message: "'" + $this.data("bootboxTitle") + "' isimli kullanıcıyı silmek istediğinize emin misiniz?",
                 className: "modal-danger",
                 buttons: {
                     cancel: {

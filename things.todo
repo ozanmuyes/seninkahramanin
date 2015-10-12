@@ -6,13 +6,17 @@ Now
   ☐ Login/register with Twitter/Facebook - twit attırmaya ve/veya sayfayı beğendirmeye yönelt
   ☐ AuthController@getSocialAuthCallback
 
+  ☐ Kullanıcı düzenle ekranında "Değişiklikleri Geri Al"a basıldığında varolan profil resmi geri gelmiyor
+
 Next
 
-  ☐ Register and login via Facebook
+  ✔ Register and login via Facebook @done (15-10-03 00:23)
   ✘ Instagram gather photos with specific tags (https://github.com/vinkla/instagram) @cancelled (15-08-28 07:14)
   ☐ E-mail to related user when the order status changed
   ☐ Use "strict" mode when changing order status
   ☐ Populate Owl partial's options http://owlgraphic.com/owlcarousel/
+
+  ☐ UserCreatedListener bookmarks
 
 Later
 

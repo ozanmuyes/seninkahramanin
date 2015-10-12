@@ -32,7 +32,30 @@ class SiteController extends Controller
      */
     public function design()
     {
-        return view("site.design");
+        $sexes = [
+            [
+                "name" => "Kadın",
+                "image" => [
+                    "path" => "female.jpg",
+                    "alt" => "Kadın Resmi"
+                ],
+                "onClick" => "selectSex();return;"
+            ],
+            [
+                "name" => "Erkek",
+                "image" => [
+                    "path" => "male.jpg",
+                    "alt" => "Erkek Resmi"
+                ],
+                "onClick" => "selectSex();return;"
+            ]
+        ];
+        $products = App\Product::all();
+
+        return view("site.design")->with([
+            "sexes" => json_decode(json_encode($sexes)),
+            "products" => $products
+        ]);
     }
 
     /**

@@ -22,6 +22,9 @@ class EventServiceProvider extends ServiceProvider
         // "Ozanmuyes\Cart\Events\ItemsAdded" => [
         //     "App\Listeners\ItemsAddedListener",
         // ],
+        "App\Events\UserCreated" => [
+            "App\Listeners\UserCreatedListener",
+        ],
     ];
 
     /**

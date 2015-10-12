@@ -3,327 +3,130 @@
 @section("title", trans("menu.design"))
 
 @section("content")
+    <section class="row">
+        <h4>Cinsiyet</h4>
 
-{{-- 
-    @include(
-        "partials.site.owl",
-        [
-            "singleItem" => true,
-            "navigation" => true,
-            "navigationText" => [
-                "<i class='icon-chevron-left icon-white'><</i>",
-                "<i class='icon-chevron-right icon-white'>></i>"
-            ],
-            "isFirst" => true,
-            "images" => [
-                [
-                    "path" => "foo.gif",
-                    "alt" => "Foo"
-                ],
-                [
-                    "path" => "bar.gif",
-                    "alt" => "Bar"
-                ],
-                [
-                    "path" => "baz.gif",
-                    "alt" => "Baz"
-                ]
-            ]
-        ]
-    )
+        <div class="col-md-8 col-md-offset-2">
+            <div class="clearfix">
+                <div class="owl-navigation pull-right" for="sexes_carousel">
+                    <a class="btn btn-default prev">
+                        <i class='fa fa-fw fa-chevron-left'></i>
+                    </a>
 
-    @include(
-        "partials.site.owl",
-        [
-            "items" => 2,
-            "navigation" => true,
-            "navigationText" => [
-                "<i class='icon-chevron-left icon-white'><</i>",
-                "<i class='icon-chevron-right icon-white'>></i>"
-            ],
-            "images" => [
-                [
-                    "path" => "baz.gif",
-                    "alt" => "Baz"
-                ],
-                [
-                    "path" => "qux.gif",
-                    "alt" => "Qux"
-                ],
-                [
-                    "path" => "baz.gif",
-                    "alt" => "Baz"
-                ]
-            ]
-        ]
-    )
- --}}
-
-    {{-- Sex --}}
-<div class="container"> 
-
-    <div class="choice">
-        <h2><span>CİNSİYETİNİZ</span></h2>
-    </div>
-
-    
-    <div class="row form-group product-chooser">
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <div class="product-chooser-item sex selected">
-
-                <img src="http://www.mrsid.com/tl_files/home/pic1.png" class="img-rounded col-xs-4 col-sm-4 col-md-12 col-lg-12">
-                <div class="col-xs-8 col-sm-8 col-md-12 col-lg-12">
-                    <span class="title">Erkek</span>
-                    <input type="radio" name="product" value="mobile_desktop" checked="checked">
+                    <a class="btn btn-default next">
+                        <i class='fa fa-fw fa-chevron-right'></i>
+                    </a>
                 </div>
-                <div class="clear"></div>
+            </div>
+
+            <div id="sexes_carousel" class="owl-carousel" data-owl='{"items": 2, "pagination": false}'>
+                @foreach ($sexes as $sex)
+                    @include(
+                        "partials.site.product",
+                        [
+                            "name" => $sex->name,
+                            "image" => [
+                                "path" => $sex->image->path,
+                                "alt" => $sex->image->alt
+                            ],
+                            "href" => @$sex->href,
+                            "onClick" => $sex->onClick
+                        ]
+                    )
+                @endforeach
             </div>
         </div>
-        
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <div class="product-chooser-item sex">
+    </section>
 
-                <img src="http://magnolias.m.a.pic.centerblog.net/197ad5c1.png" class="img-rounded col-xs-4 col-sm-4 col-md-12 col-lg-12">
-                <div class="col-xs-8 col-sm-8 col-md-12 col-lg-12">
-                    <span class="title">Bayan</span>
-                    <input type="radio" name="product" value="desktop">
+    <section class="row">
+        <h4>Ürünler</h4>
+
+        <div class="col-md-8 col-md-offset-2">
+            <div class="clearfix">
+                <div class="owl-navigation pull-right" for="products_carousel">
+                    <a class="btn btn-default prev">
+                        <i class='fa fa-fw fa-chevron-left'></i>
+                    </a>
+
+                    <a class="btn btn-default next">
+                        <i class='fa fa-fw fa-chevron-right'></i>
+                    </a>
                 </div>
-                <div class="clear"></div>
+            </div>
+
+            <div id="products_carousel" class="owl-carousel" data-owl='{"items": 4, "pagination": false}'>
+                @foreach ($products as $product)
+                    @include(
+                        "partials.site.product",
+                        [
+                            "id" => $product->id,
+                            "slug" => $product->slug,
+                            "name" => $product->name,
+                            "image" => [
+                                "path" => "product1.png",
+                                "alt" => "product1 Image"
+                            ],
+                            "buttons" => [
+                                [
+                                    "icon" => "fa fa-shopping-cart",
+                                    "href" => "/urunler/\slug",
+                                    "text" => "Sepete Ekle"
+                                ],
+                                [
+                                    "icon" => "fa fa-list",
+                                    "href" => "#",
+                                    "text" => "İncele"
+                                ]
+                            ]
+                        ]
+                    )
+                @endforeach
             </div>
         </div>
-    </div>
-
-
-
-
-    {{-- model --}}
-    <div class="choice">
-        <h2><span>MODELİNİZ</span></h2>
-    </div>
-
-    
-    <div class="row form-group product-chooser">
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-            <div class="product-chooser-item selected">
-
-                <img src="http://placehold.it/350x350" class="img-rounded col-xs-4 col-sm-4 col-md-12 col-lg-12">
-                <div class="col-xs-8 col-sm-8 col-md-12 col-lg-12">
-                    <span class="title">Ürün 1</span>
-                    <input type="radio" name="product" value="mobile_desktop" checked="checked">
-                </div>
-                <div class="clear"></div>
-            </div>
-        </div>
-        
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-            <div class="product-chooser-item">
-
-                <img src="http://placehold.it/350x350" class="img-rounded col-xs-4 col-sm-4 col-md-12 col-lg-12">
-                <div class="col-xs-8 col-sm-8 col-md-12 col-lg-12">
-                    <span class="title">Ürün 2</span>
-                    <input type="radio" name="product" value="mobile_desktop" checked="checked">
-                </div>
-                <div class="clear"></div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-            <div class="product-chooser-item">
-
-                <img src="http://placehold.it/350x350" class="img-rounded col-xs-4 col-sm-4 col-md-12 col-lg-12">
-                <div class="col-xs-8 col-sm-8 col-md-12 col-lg-12">
-                    <span class="title">Ürün 3</span>
-                    <input type="radio" name="product" value="mobile_desktop" checked="checked">
-                </div>
-                <div class="clear"></div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-            <div class="product-chooser-item">
-
-                <img src="http://placehold.it/350x350" class="img-rounded col-xs-4 col-sm-4 col-md-12 col-lg-12">
-                <div class="col-xs-8 col-sm-8 col-md-12 col-lg-12">
-                    <span class="title">Ürün 4</span>
-                    <input type="radio" name="product" value="mobile_desktop" checked="checked">
-                </div>
-                <div class="clear"></div>
-            </div>
-        </div>
-    </div>
-
-
-    {{-- Renk --}}
-    <div class="choice">
-        <h2><span>ARKA PLAN RENGİ</span></h2>
-    </div>
-
-    
-    <div class="row form-group product-chooser">
-
-        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-            <div class="product-chooser-item color-red selected">
-
-                <div class="clear"></div>
-            </div>
-        </div>
-        
-        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-            <div class="product-chooser-item color-blue">
-
-                <div class="clear"></div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-            <div class="product-chooser-item color-purple">
-
-                <div class="clear"></div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-            <div class="product-chooser-item color-black">
-
-                <div class="clear"></div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-                <div class="product-chooser-item color-green">
-
-                <div class="clear"></div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-            <div class="product-chooser-item color-brown">
-
-                
-                <div class="clear"></div>
-            </div>
-        </div>
-       
-    </div>
-
-    
-    {{-- Speech Baloon --}}
-    <div class="choice">
-        <h2><span>KONUŞMA BALONCUĞU</span></h2>
-    </div>
-
-    
-    <div class="row form-group product-chooser">
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-            <div class="product-chooser-item selected">
-
-                <img src="http://placehold.it/350x350" class="img-rounded col-xs-4 col-sm-4 col-md-12 col-lg-12">
-                <div class="col-xs-8 col-sm-8 col-md-12 col-lg-12">
-                    <span class="title">Konuşma Balonu 1</span>
-                    <input type="radio" name="product" value="mobile_desktop" checked="checked">
-                </div>
-                <div class="clear"></div>
-            </div>
-        </div>
-        
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-            <div class="product-chooser-item">
-
-                <img src="http://placehold.it/350x350" class="img-rounded col-xs-4 col-sm-4 col-md-12 col-lg-12">
-                <div class="col-xs-8 col-sm-8 col-md-12 col-lg-12">
-                    <span class="title">Konuşma Balonu 2</span>
-                    <input type="radio" name="product" value="mobile_desktop" checked="checked">
-                </div>
-                <div class="clear"></div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-            <div class="product-chooser-item">
-
-                <img src="http://placehold.it/350x350" class="img-rounded col-xs-4 col-sm-4 col-md-12 col-lg-12">
-                <div class="col-xs-8 col-sm-8 col-md-12 col-lg-12">
-                    <span class="title">Konuşma Balonu 3</span>
-                    <input type="radio" name="product" value="mobile_desktop" checked="checked">
-                </div>
-                <div class="clear"></div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-            <div class="product-chooser-item">
-
-                <img src="http://images.sodahead.com/polls/001294987/600px_No_sign2svg_answer_3_xlarge.png" class="img-rounded col-xs-4 col-sm-4 col-md-12 col-lg-12">
-                <div class="col-xs-8 col-sm-8 col-md-12 col-lg-12">
-                    <span class="title">Konuşma Balonu İstemiyorum</span>
-                    <input type="radio" name="product" value="mobile_desktop" checked="checked">
-                </div>
-                <div class="clear"></div>
-            </div>
-        </div>
-    </div>
-
-    {{-- Size --}}
-    <div class="choice">
-        <h2><span>BEDENİNİZ</span></h2>
-    </div>
-
-    
-    <div class="row form-group product-chooser">
-
-        <div class="col-xs-12 col-sm-12 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
-            <div class="product-chooser-item selected">
-                    <h1 align="center">XS</h1>
-                <div class="clear"></div>
-            </div>
-        </div>
-        
-        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-            <div class="product-chooser-item">
-                    <h1 align="center">S</h1>
-                <div class="clear"></div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-            <div class="product-chooser-item">
-                    <h1 align="center">M</h1>
-                <div class="clear"></div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-            <div class="product-chooser-item">
-                    <h1 align="center">L</h1>
-                <div class="clear"></div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-            <div class="product-chooser-item">
-                    <h1 align="center">XL</h1>
-                <div class="clear"></div>
-            </div>
-        </div>
-
-       
-    </div>
-
-    <div class="col-sm-4 col-sm-offset-4 design-end">
-        <a class="btn btn-success btn-lg btn-block"role="button">Tasarımı Tamamla</a>
-    </div>
-
-
-
-</div>
-
-
+    </section>
 @endsection
 
 @section("styles")
-    {!! Html::style('css/site/design.css') !!}
+    @parent
+
+    {!! Html::style("css/owl.carousel.css") !!}
+    {!! Html::style("css/owl.theme.css") !!}
 @endsection
 
 @section("scripts")
-    {!! Html::script('js/partials/site/selector.js') !!}
+    @parent
+
+    {!! Html::script("js/owl.carousel.min.js") !!}
+
+    <script>
+        $(document).ready(function() {
+            $(".owl-carousel").each(function (idx, elm) {
+                window[elm.id] = $(elm).owlCarousel(JSON.parse(elm.getAttribute("data-owl")));
+            });
+
+            // var sexes_carousel = $("#sexes_carousel"),
+            //     products_carousel = $("#products_carousel");
+
+            // sexes_carousel.owlCarousel({
+            //     items: 4
+            // });
+
+            // products_carousel.owlCarousel({
+            //     items: 4
+            // });
+
+            // Custom Navigation Events
+            $(".owl-navigation .next").click(function() {
+                $(window[$(this.parentElement).attr("for")]).trigger("owl.next");
+            });
+
+            $(".owl-navigation .prev").click(function() {
+                $(window[$(this.parentElement).attr("for")]).trigger("owl.prev");
+            });
+        });
+
+        function selectSex() {
+            console.log();
+        }
+    </script>
 @endsection

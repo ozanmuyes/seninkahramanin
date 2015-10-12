@@ -93,6 +93,23 @@
                 </ul>
             </li>
 
+            <li class="treeview {{ Active::routePattern('Admin.Products.*') }}">
+                <a href="#">
+                    <i class="fa fa-fw fa-cubes"></i>&nbsp;
+                    <span>Ürünler</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+
+                <ul class="treeview-menu">
+                    <li class="{{ Active::route('Admin.Products.Index') }}">
+                        <a href="{{ route('Admin.Products.Index') }}">
+                            <i class="fa fa-fw fa-list-alt"></i>&nbsp;
+                            Tümünü Gör
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
             <li class="treeview {{ Active::routePattern('Admin.Orders.*') }}">
                 <a href="#">
                     <i class="fa fa-fw fa-truck"></i>&nbsp;

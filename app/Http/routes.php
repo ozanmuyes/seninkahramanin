@@ -13,7 +13,7 @@
 
 Route::get("foo", "Site\SiteController@foo");
 
-Route::get("cart", function () {
+Route::get("group/test-band/repertoire", function () {
     return view("dd")->with("var", json_encode(Cart::getContent()));
 });
 Route::get("cart/clear", function () {
@@ -145,6 +145,7 @@ Route::group(
                 Route::get("/", ["as" => "Index", "uses" => "UsersController@index"]);
 
                 Route::get("ekle", ["as" => "Create", "uses" => "UsersController@create"]);
+                Route::post("ekle", "UsersController@store");
 
                 Route::group(
                     [
@@ -208,11 +209,38 @@ Route::group(
 
         Route::group(
             [
+                "prefix" => "urunler",
+                "as" => "Products."
+            ],
+            function () {
+                Route::get("/", ["as" => "Index", "uses" => "ProductsController@index"]);
+            }
+        );
+
+        Route::group(
+            [
                 "prefix" => "siparisler",
                 "as" => "Orders."
             ],
             function () {
                 Route::get("/", ["as" => "Index", "uses" => "OrdersController@index"]);
+            }
+        );
+    }
+);
+
+Route::group(
+    [
+        "prefix" => "api",
+        "namespace" => "Admin"
+    ],
+    function () {
+        Route::group(
+            [
+                "prefix" => "users"
+            ],
+            function () {
+                Route::get("is-email-unique", "UsersController@isEmailUnique");
             }
         );
     }

@@ -21,11 +21,11 @@ body {
     transition: all 0.2s ease-out;
 }
 
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
     .navbar-collapse {
         background-color: #E8F8E5;
     }
-}
+}*/
 
 /* Outer Border of all table cart */
 .table {

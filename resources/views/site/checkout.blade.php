@@ -51,9 +51,8 @@
                     </div>
 
                     <div class="form-group">
-                      {!! Form::label("password", "Sipariş Teslim Adresiniz") !!}  
-                      <textarea name="InputMessage" class="form-control" rows="5" required></textarea>
-                      
+                        {!! Form::label("password", "Sipariş Teslim Adresiniz") !!}
+                        <textarea name="InputMessage" class="form-control" rows="5" required></textarea>
                     </div>
 
                     {!! Form::submit("Siparişi Tamamla", ["class" => "btn btn-lg btn-success btn-block"]) !!}

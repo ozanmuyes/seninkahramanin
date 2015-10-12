@@ -20,7 +20,8 @@
         "ozanmuyes/laravel5cart": "dev-master",
         "predis/predis": "~1.0",
         "artisaninweb/laravel-soap": "0.2.*",
-        "mcamara/laravel-localization": "1.0.*"
+        "mcamara/laravel-localization": "1.0.*",
+        "pda/pheanstalk": "~3.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

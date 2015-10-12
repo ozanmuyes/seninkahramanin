@@ -96,4 +96,34 @@ class User extends Model implements
     {
         return $this->first_name . " " . $this->last_name;
     }
+
+    /**
+     * Returns big profile picture
+     *
+     * @return App\Image
+     */
+    public function profilePicture()
+    {
+        return $this->pictures->first();
+    }
+
+    /**
+     * Returns medium profile picture
+     *
+     * @return App\Image
+     */
+    public function profilePictureMedium()
+    {
+        return $this->pictures[1];
+    }
+
+    /**
+     * Returns small profile picture
+     *
+     * @return App\Image
+     */
+    public function profilePictureSmall()
+    {
+        return $this->pictures[2];
+    }
 }

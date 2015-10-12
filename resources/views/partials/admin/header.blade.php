@@ -34,7 +34,7 @@
                                     <a href="#">
                                         <div class="pull-left">
                                             <!-- User Image -->
-                                            <img src="{{ '//placeholdit.imgix.net/~text?txtsize=33&txt=' . $admin->username . '&w=256&h=256' }}" class="img-circle" alt="User Image" />
+                                            {!! Html::image($picture_sm->path, $picture_sm->alt, ["class" => "img-circle"]) !!}
                                         </div>
 
                                         <!-- Message title and timestamp -->
@@ -47,7 +47,7 @@
                                         <p>Why not buy a new awesome theme?</p>
                                     </a>
                                 </li><!-- end message -->
-                            </ul><!-- /.menu -->
+                            </ul>
                         </li>
 
                         <li class="footer">
@@ -107,7 +107,7 @@
                     <!-- Menu Toggle Button -->
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <!-- The user image in the navbar-->
-                        {!! Html::image($picture->path, $picture->alt, ["class" => "user-image"]) !!}
+                        {!! Html::image($picture_sm->path, $picture_sm->alt, ["class" => "user-image"]) !!}
 
                         <!-- hidden-xs hides the username on small devices so only the image appears. -->
                         <span class="hidden-xs">{{ $admin->name }}</span>

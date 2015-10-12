@@ -17,10 +17,13 @@ class ComposerServiceProvider extends ServiceProvider
     {
         view()->composer("layouts.admin.default", function ($view) {
             $admin = Auth::user();
+            $pictures = $admin->pictures;
 
             $view->with([
                 "admin" => $admin,
-                "picture" => $admin->pictures[0]
+                "picture" => $pictures[0],
+                "picture_sm" => $pictures[1],
+                "picture_lg" => $pictures[2]
             ]);
         });
     }

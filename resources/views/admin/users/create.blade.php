@@ -1,17 +1,21 @@
 @extends("layouts.admin.default")
 
-@section("title", "Kullanıcı Düzenle")
-@section("subtitle", "Kullanıcının belirli hesap ayarlarını değiştirin")
+@section("title", "Yeni Kullanıcı")
+@section("subtitle", "Yeni kullanıcı hesabı oluşturun ve bu kullanıcıya yetki verin")
 
 @section("breadcrumb")
-    {!! Breadcrumbs::render("admin.users.edit") !!}
+    {!! Breadcrumbs::render("admin.users.create") !!}
 @endsection
 
 @section("content")
     <div class="row">
         <div class="col-md-6">
-            <div class="box box-warning">
-                {!! Form::model($user, ["role" => "form"]) !!}
+            <div class="box box-success">
+                <div class="box-header with-border">
+                    <h3 class="box-title text-muted">Tüm alanların doldurulması zorunludur.</h3>
+                </div>
+
+                {!! Form::open(["role" => "form"]) !!}
                     <div class="box-body">
                         <div class="row">
                             <div class="form-group col-lg-6">
@@ -64,7 +68,10 @@
                                 null,
                                 [
                                     "class" => "form-control",
-                                    "required" => "required"
+                                    "required" => "required",
+                                    "data-parsley-remote" => "",
+                                    "data-parsley-remote-validator" => "is-email-unique",
+                                    "data-parsley-remote-message" => "Aynı e-mail adresiyle birden fazla kullanıcı kayıt olamaz."
                                 ])
                             !!}
                         </div>
@@ -86,10 +93,11 @@
                             {!! Form::select(
                                 "role",
                                 $roles,
-                                $user["role"],
+                                null,
                                 [
                                     "class" => "form-control",
-                                    "required" => "required"
+                                    "required" => "required",
+                                    "placeholder" => "Kullanıcı için bir rol seçin..."
                                 ])
                             !!}
                         </div>
@@ -99,17 +107,15 @@
                                 "partials.admin.cropper",
                                 [
                                     "label" => "Profil Resmi",
-                                    "uploadButtonText" => "Araştır...",
-                                    "placeholder" => $user["profilePicture"],
-                                    "autoCropArea" => 1
+                                    "uploadButtonText" => "Araştır..."
                                 ]
                             )
                         </div>
                     </div>
 
                     <div class="box-footer">
-                        {!! Form::submit("Değişiklikleri Kaydet", ["class" => "btn btn-success"]) !!}
-                        {!! Form::reset("Değişiklikleri Geri Al", ["class" => "btn btn-default"]) !!}
+                        {!! Form::submit("Kaydet", ["class" => "btn btn-success"]) !!}
+                        {!! Form::reset("Temizle", ["class" => "btn btn-default"]) !!}
                     </div>
                 {!! Form::close() !!}
             </div>
@@ -147,21 +153,27 @@
                 ));
             }
 
-        // TODO HACK Reset to placeholder when form is reset
-
         // Parsley
-            window.Parsley.setLocale("tr");
+            // window.Parsley.setLocale("tr");
 
-            $("form").parsley({
-                errorClass: "has-error",
-                classHandler: function (el) {
-                    return el.$element.closest(".form-group");
-                },
-                errorsContainer: function (el) {
-                    return el.$element.closest(".form-group");
-                },
-                errorsWrapper: "<span class='help-block'></span>",
-                errorTemplate: "<span></span>"
-            });
+            // $("form").parsley({
+            //     errorClass: "has-error",
+            //     classHandler: function (el) {
+            //         return el.$element.closest(".form-group");
+            //     },
+            //     errorsContainer: function (el) {
+            //         return el.$element.closest(".form-group");
+            //     },
+            //     errorsWrapper: "<span class='help-block'></span>",
+            //     errorTemplate: "<span></span>"
+            // });
+
+            // window.Parsley.addAsyncValidator(
+            //     "is-email-unique",
+            //     function (xhr) {
+            //         return (xhr.responseJSON.id === null);
+            //     },
+            //     "//seninkahramanin.dev/api/users/is-email-unique"
+            // );
     </script>
 @endsection
