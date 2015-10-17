@@ -69,13 +69,8 @@
                             "buttons" => [
                                 [
                                     "icon" => "fa fa-shopping-cart",
-                                    "href" => "/urunler/\slug",
+                                    "href" => "/sepet/ekle/\slug",
                                     "text" => "Sepete Ekle"
-                                ],
-                                [
-                                    "icon" => "fa fa-list",
-                                    "href" => "#",
-                                    "text" => "İncele"
                                 ]
                             ]
                         ]
