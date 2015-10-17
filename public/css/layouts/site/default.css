@@ -180,3 +180,7 @@ section > h1 {
 ul.slides {
     list-style: none;
 }
+
+.navbar-brand {
+    padding: 0;
+}

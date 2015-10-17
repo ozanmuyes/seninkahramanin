@@ -10,7 +10,8 @@
             </button>
 
             <a class="navbar-brand" href="{{ route('Site.Index') }}" title="Senin Kahramanın">
-                Logo
+                {{-- Logo --}}
+                {!! Html::image("img/logo-menu.png", "Logo") !!}
             </a>
         </div>
 
