@@ -13,7 +13,7 @@
                 <img alt="First slide" src="img/slide/first.jpg">
             </div>
             <div class="item active">
-                <img alt="Second slide" src="img/slide/sans-oil-paint.jpg">
+                <img alt="Second slide" src="img/slide/second.jpg">
             </div>
 
             <div class="item">
