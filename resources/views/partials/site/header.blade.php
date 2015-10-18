@@ -11,7 +11,7 @@
 
             <a class="navbar-brand" href="{{ route('Site.Index') }}" title="Senin Kahramanın">
                 {{-- Logo --}}
-                {!! Html::image("img/logo-menu.png", "Logo", ["style" => "margin-top: -7px;"]) !!}
+                {!! Html::image("img/logo-menu.png", "Logo", ["style" => "margin-top: -45px;"]) !!}
             </a>
         </div>
 
@@ -59,3 +59,5 @@
         </div>
     </div>
 </nav>
+
+<div class="menu-waypoint"></div>

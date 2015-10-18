@@ -1,7 +1,7 @@
 body {
     font-family: 'Lato';
     color: #292929;
-    padding-top: 81px;
+    padding-top: 111px;
     background-image: url("../../../img/bggreen.png");
 }
 
@@ -133,7 +133,8 @@ section {
 /* Navbar Padding and color */
 .navbar-brand-bow {
     background-color: #ffffff;
-    padding: 15px 0 15px 0;
+    /*padding: 15px 0 15px 0;*/
+    padding: 45px 0 45px;
 }
 
 /* Navbar Font */

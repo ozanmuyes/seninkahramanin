@@ -57,6 +57,7 @@
 
         {!! Html::script("js/jquery-2.1.4.min.js") !!}
         {!! Html::script("js/layouts/bootstrap.min.js") !!}
+        {!! Html::script("js/jquery.waypoints.min.js") !!}
         {!! Html::script("js/layouts/site/default.js") !!}
         @yield("scripts")
     </body>
