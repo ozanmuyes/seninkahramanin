@@ -9,19 +9,19 @@
 
         <div role="listbox" class="carousel-inner">
             <div class="item">
-                <img alt="First slide" src="http://www.petzonebrand.com/wp-content/uploads/2013/10/dog-toys7.jpg">
+                <img alt="First slide" src="img/slide/oscar.jpg">
             </div>
 
             <div class="item active">
-                <img alt="First slide" src="http://www.petzonebrand.com/wp-content/uploads/2013/07/waste-mangement.jpg">
+                <img alt="Second slide" src="img/slide/sans-oil-paint.jpg">
             </div>
 
             <div class="item">
-                <img alt="First slide" src="http://www.brendo.com.au/wp-content/uploads/2014/12/MadPawsBanner.jpg">
+                <img alt="Third slide" src="img/slide/sans-popart.jpg">
             </div>
 
             <div class="item">
-                <img alt="First slide" src="http://www.petzonebrand.com/wp-content/uploads/2013/10/cat-toys1.jpg">
+                <img alt="Fourth slide" src="img/slide/tarcin.jpg">
             </div>
         </div>
 
