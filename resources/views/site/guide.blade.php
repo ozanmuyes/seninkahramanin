@@ -17,7 +17,8 @@
                         <li>
                             <div class="col-md-4">
                                 <div class="flat-box">
-                                    <div class="colourway colour1"></div>
+                                    {{-- <div class="colourway colour1"></div> --}}
+                                    <img src="img/guide/two_pets.jpg" alt="Two pets" class="img-responsive">
                                     <p class="title">Doğru Örnek</p>
                                     <p class="feature-text">fotoğrafın neden basarılı olduğuna dair açıklama yapılabilecek alan.</p>
                                 </div>

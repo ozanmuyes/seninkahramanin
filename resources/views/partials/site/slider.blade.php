@@ -9,19 +9,19 @@
 
         <div role="listbox" class="carousel-inner">
 
-            <div class="item">
+            <div class="item active">
                 <img alt="First slide" src="img/slide/first.jpg">
             </div>
-            <div class="item active">
+            <div class="item">
                 <img alt="Second slide" src="img/slide/second.jpg">
             </div>
 
             <div class="item">
-                <img alt="Third slide" src="img/slide/sans-popart.jpg">
+                <img alt="Third slide" src="img/slide/third.jpg">
             </div>
 
             <div class="item">
-                <img alt="Fourth slide" src="img/slide/tarcin.jpg">
+                <img alt="Fourth slide" src="img/slide/fourth.jpg">
             </div>
         </div>
 
