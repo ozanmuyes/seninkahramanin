@@ -26,7 +26,8 @@
 
                             <div class="col-md-4">
                                 <div class="flat-box">
-                                    <div class="colourway colour2"></div>
+                                    {{-- <div class="colourway colour2"></div> --}}
+                                    <img src="img/guide/foo.jpg" alt="Two pets" class="img-responsive">
                                     <p class="title">Kötü Örnek</p>
                                     <p class="feature-text">fotoğrafın neden basarısız olduğuna dair açıklama yapılabilecek alan.</p>
                                 </div>
