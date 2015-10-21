@@ -8,13 +8,13 @@
 }*/
 
 @font-face{
-    font-family: 'Amatic Regular';
-    src: url('../../../fonts/AmaticSC-Regular.ttf');
+    font-family: "Amatic Regular";
+    src: url("../../../fonts/AmaticSC-Regular.ttf");
 }
 
 @font-face{
-    font-family: 'Amatic Bold';
-    src: url('../../../fonts/Amatic-Bold.ttf');
+    font-family: "Amatic Bold";
+    src: url("../../../fonts/Amatic-Bold.ttf");
 }
 
 
