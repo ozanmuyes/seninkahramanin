@@ -148,7 +148,7 @@ return [
 
         Bican\Roles\RolesServiceProvider::class,
 
-        Barryvdh\Debugbar\ServiceProvider::class,
+        // Barryvdh\Debugbar\ServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         HieuLe\Active\ActiveServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,

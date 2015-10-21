@@ -3,19 +3,14 @@
 @section("title", trans("menu.index"))
 
 @section("content")
-    {{-- Slider --}}
     <div class="row">
         <div class="col-md-12 no-padding-lr">
             @include("partials.site.slider")
         </div>
     </div>
-    {{-- /Slider --}}
 
-    {{-- outer border --}}
     <div class="row">
-        {{-- outer border column --}}
-        <div class="col-md-offset-2 col-md-8">
-            {{-- Title & Explanation (For divide slider and story line) --}}
+        <div class="col-md-8 col-md-offset-2">
             <section>
                 <h1 class="text-center">Senin Kahramanın</h1>
 
@@ -29,12 +24,10 @@
                     yaratp karmaşayı engellemek ve düzgün görünüm sağlamaktır.
                 </p>
             </section>
-            {{-- /Title & Explanation --}}
 
-            {{-- Story Line --}}
             <section>
-                <div class="media">
-                    <div class="row shadow">
+                <article class="row margin-bottom-md">
+                    <div class="media shadow">
                         <div class="col-md-5 col-sm-12 col-xs-12">
                             <div class="media-left">
                                 <img class="media-object" src="img/story1.png" height="300" width="350">
@@ -49,10 +42,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="media">
-                    <div class="row">
+                <article class="row margin-bottom-md">
+                    <div class="media shadow">
                         <div class="col-md-7 col-sm-12 col-xs-12">
                             <div class="media-body">
                                 <h4>başlık 2</h4>
@@ -67,10 +60,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="media">
-                    <div class="row shadow">
+                <article class="row margin-bottom-md">
+                    <div class="media shadow">
                         <div class="col-md-5 col-sm-12 col-xs-12">
                             <div class="media-left">
                                 <img class="media-object" src="img/story3.png" height="300" width="350">
@@ -85,15 +78,18 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
-                {{-- Call To action button --}}
-                <div class="col-sm-4 col-sm-offset-4">
-                    <a class="btn btn-success btn-lg btn-block" href="{{ route('Site.Design') }}" role="button">Şimdi Tasarla!</a>
-                </div>
-                {{-- /Call To action button --}}
+                </article>
             </section>
-            {{-- /Story Line --}}
-        </div>{{-- /outer border column --}}
-    </div>{{-- /outer border --}}
+
+            <section>
+                <h1 class="text-center">Sipariş Verin</h1>
+
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-4">
+                        <a class="btn btn-success btn-lg btn-block" href="{{ route('Site.Design') }}" role="button">Şimdi Tasarla!</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
 @endsection

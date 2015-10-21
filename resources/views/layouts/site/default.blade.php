@@ -12,11 +12,12 @@
         {{-- {!! Html::style("//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css") !!} --}}
         {!! Html::style("css/layouts/font-awesome.min.css") !!}
 
-        {!! Html::style("css/layouts/site/default.css") !!}
-{!! Html::style("css/site/style.min.css") !!}
+        {!! Html::style("css/site/style.min.css") !!}
 
         {!! Html::style("css/layouts/site/fonts.css") !!}
         {!! Html::style("css/layouts/site/bootstrap-social.css") !!}
+
+        {!! Html::style("css/site/jquery.modal.css") !!}
 
         {{-- <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Advent+Pro:500&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
@@ -41,7 +42,7 @@
     <body>
         @include("partials.site.header")
 
-        <div class="container-fluid">
+        <main class="container-fluid" role="main">
             <div class="row">
                 <div id="flash" class="col-md-6 col-md-offset-3">
                     @include('flash::message')
@@ -51,12 +52,14 @@
             @yield("content")
 
             @include("partials.site.footer")
-        </div>
+        </main>
 
         @yield("styles")
 
         {!! Html::script("js/jquery-2.1.4.min.js") !!}
         {!! Html::script("js/layouts/bootstrap.min.js") !!}
+        {{-- http://kylefox.ca/jquery-modal/examples/ --}}
+        {!! Html::script("js/layouts/site/jquery.modal.min.js") !!}
         {!! Html::script("js/layouts/site/default.js") !!}
         @yield("scripts")
     </body>

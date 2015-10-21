@@ -1,20 +1,20 @@
 <footer>
     <div class="row">
-        <div class="col-md-12 footer-img">
+        <div class="col-md-12">
             <div class="row">
                 <div class="col-md-4">
                     <p class="footer-text" align="center">
-                        
+
                         {{-- <a href="{{ route('Admin.Index') }}">Yönetim Paneli</a>
                         <br> --}}
-                        
-                        <a href="#">Tüm hakları saklıdır.</a>            
+
+                        <a href="#">Lisanslar</a>
                         <br>
-                        <a href="#">Gizlilik Politikası ve Lisanslar</a> 
+                        <a href="privacy_policy.html" rel="modal:open">Gizlilik Politikası</a>
                         <br>
-                        <a href="#">Tüketici sözleşmesi</a> 
+                        <a href="#">Tüketici sözleşmesi</a>
                         <br>
-                        
+
                     </p>
                 </div>
 

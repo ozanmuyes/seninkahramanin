@@ -9,6 +9,6 @@
 
     <h1>Önceki Alışverişleriniz</h1>
 
-    
-    
+
+
 @endsection

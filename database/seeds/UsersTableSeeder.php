@@ -16,22 +16,22 @@ class UsersTableSeeder extends Seeder
     {
         $users = [
             [
-                "twitter_id" => null,
-                "facebook_id" => null,
-                "first_name" => "Mutlu",
-                "last_name" => "Erdem",
-                "email" => "mutluerdem7@gmail.com",
-                "password" => "Alaz1310",
-                "role" => "admin",
-            ],
-            [
                 "twitter_id" => "182767166",
                 "facebook_id" => "10153312319043172",
                 "first_name" => "Ozan",
                 "last_name" => "Müyesseroğlu",
                 "email" => "ozi5169@gmail.com",
                 "password" => "muyes5169",
-                "role" => "admin",
+                "role" => "admin"
+            ],
+            [
+                "twitter_id" => null,
+                "facebook_id" => null,
+                "first_name" => "Münir",
+                "last_name" => "Özkul",
+                "email" => "m.ozkul@gmail.com",
+                "password" => "m.ozkul@gmail.com",
+                "role" => "admin"
             ],
             [
                 "twitter_id" => null,
@@ -40,7 +40,7 @@ class UsersTableSeeder extends Seeder
                 "last_name" => "Ünlü",
                 "email" => "cemunlu27@gmail.com",
                 "password" => "cemunlu27@gmail.com",
-                "role" => "user",
+                "role" => "user"
             ]
         ];
 

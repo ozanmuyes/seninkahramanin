@@ -5,27 +5,177 @@ body {
     background-image: url("../../../img/bggreen.png");
 }
 
-.row.vertically-divide [class*='col-']:not(:last-child):after {
-    background: #E1E1E1;
-    width: 1px;
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
+nav {
+    .badge {
+        border-radius: 9px;
+        font-family: sans-serif;
+    }
+}
+
+.navbar-toggle {
+    border-color: #bbb;
+
+    .icon-bar {
+        background-color: #bbb;
+    }
+}
+
+section {
+    padding-bottom: 45px;
+
+    &>h1 {
+        margin-bottom: 30px;
+    }
+}
+
+.row {
+    &.vertically-divide [class*='col-']:not(:last-child):after {
+        background: #E1E1E1;
+        width: 1px;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+.table {
+    border: solid 2px #d6d6d6;
+}
+
+.table-cart {
+    margin-bottom: 0;
+}
+
+.margin-bottom-md {
+    margin-bottom: 2em;
+}
+
+.no-padding-lr {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.shadow {
+    height: 100%;
+    width: 100%;
+    background-color: #E8F8E5;
 }
 
 nav,
 .footer-text {
     font-family: "Amatic Bold", Arial, Helvetica, sans-serif;
+    font-size: 24px;
 }
+
+footer {
+    margin-top: 40px;
+    background-color: #E8F8E5;
+
+    .footer-text {
+        color: #449D44;
+    }
+}
+
+// Pages
+    // Guide
+        .comparison-box {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .flat-box {
+            background-color: #fff;
+            -webkit-box-shadow: 0px 3px 0px 0px rgba(234, 234, 234, 1);
+            -moz-box-shadow: 0px 3px 0px 0px rgba(234, 234, 234, 1);
+            box-shadow: 0px 3px 0px 0px rgba(234, 234, 234, 1);
+            -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease;
+            transition: all 0.5s ease; -moz-transition: all 0.5s ease;
+
+            &:hover,
+            &:focus {
+                @media (min-width: 768px) {
+                    transform: translate(0, -15px);
+                    -webkit-transform: translate(0, -15px);
+                    -o-transform: translate(0, -15px);
+                    -moz-transform: translate(0, -15px);
+                }
+            }
+
+            &.background-right {
+                background-color: #EEFFEE;
+            }
+
+            &.background-wrong {
+                background-color: #FFEEEE;
+            }
+        }
+
+        .title {
+            font-size: 15px;
+            color: #9197a8;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 2px;
+            padding: 20px 40px 0;
+        }
+
+        .feature-text {
+            padding: 0px 20px 40px 40px;
+            font-style: italic;
+            color: #7a8387;
+            font-size: 16px;
+        }
+
+    // About Us
+        .about-giris{
+            margin-top: 120px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .right{
+            text-align: right;
+            font-style: italic;
+        }
+
+        .about-motto{
+            font-family: 'Poiret One', cursive;
+            color: black;
+            font-style: italic;
+            text-align: center;
+            font-size: 30px;
+            text-align: center;
+            vertical-align: center;
+        }
+
+        hr {
+            margin-top: 80px;
+            border:none;
+            border-top:1.8px solid #979797;
+            height:1px;
+            width:100%;
+        }
+
+        .about-form{
+            padding-top: 80px;
+            padding-bottom: 60px;
+        }
+
+        a {
+            color: #439D4E;
+        }
 
 // Partials
     // Site Header
         .navbar-brand-app {
             background-color: #ffffff;
-            /*padding: 15px 0 15px 0;*/
             padding: 45px 0 45px;
 
             ul {
@@ -86,4 +236,43 @@ nav,
                     border-bottom: 1px solid #E1E1E1;
                 }
             }
+        }
+
+    // Cart
+        .text-cart-bow {
+            width: 100%;
+            display: inline-block;
+            margin-left: 0px;
+        }
+
+        @media (min-width: 768px) {
+            .text-cart-bow {
+                width: 70%;
+                margin-left: 10px;
+            }
+        }
+
+        .img-cart-bow {
+            max-width: 110px;
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+        .total-page {
+            background-color: #f5f5f5;
+            border: solid 2px #d6d6d6;
+            border-top: transparent;
+            padding: 15px;
+        }
+
+        .img-full-size {
+            width: 100%;
+        }
+
+    // Slider
+        .carousel-control.left,
+        .carousel-control.right  {
+            background-image: none;
         }

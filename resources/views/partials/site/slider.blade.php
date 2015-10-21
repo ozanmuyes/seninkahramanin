@@ -8,10 +8,10 @@
         </ol>
 
         <div role="listbox" class="carousel-inner">
-
             <div class="item active">
                 <img alt="First slide" src="img/slide/first.jpg">
             </div>
+
             <div class="item">
                 <img alt="Second slide" src="img/slide/second.jpg">
             </div>
@@ -25,12 +25,12 @@
             </div>
         </div>
 
-        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <a class="carousel-control left" href="#carousel-example-generic" role="button" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
 
-        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <a class="rcarousel-control ight" href="#carousel-example-generic" role="button" data-slide="next">
             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>

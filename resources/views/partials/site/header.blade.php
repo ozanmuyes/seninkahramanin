@@ -32,7 +32,7 @@
                 </li>
 
                 <li class="{{ Active::route('Site.Cart.Index') }}">
-                    <a href="{{ route('Site.Cart.Index') }}">{{ trans("menu.cart") }} <span class="badge">{{ Cart::getContent()->count() }}</span></a>
+                    <a href="{{ route('Site.Cart.Index') }}">{{ trans("menu.cart") }}&nbsp;&nbsp;<span class="badge">{{ Cart::getContent()->count() }}</span></a>
                 </li>
 
                 @if (Auth::check())
