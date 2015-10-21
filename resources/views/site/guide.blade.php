@@ -17,8 +17,7 @@
                         <li>
                             <div class="col-md-4">
                                 <div class="flat-box">
-                                    {{-- <div class="colourway colour1"></div> --}}
-                                    <img src="img/guide/two_pets.jpg" alt="Two pets" class="img-responsive">
+                                    <img src="img/guide/Yeterli Işık.jpg" alt="Two pets" class="img-responsive">
                                     <p class="title">Doğru Örnek</p>
                                     <p class="feature-text">fotoğrafın neden basarılı olduğuna dair açıklama yapılabilecek alan.</p>
                                 </div>
@@ -26,8 +25,7 @@
 
                             <div class="col-md-4">
                                 <div class="flat-box">
-                                    {{-- <div class="colourway colour2"></div> --}}
-                                    <img src="img/guide/foo.jpg" alt="Two pets" class="img-responsive">
+                                    <img src="img/guide/Yetersiz Işık.jpg" alt="Two pets" class="img-responsive">
                                     <p class="title">Kötü Örnek</p>
                                     <p class="feature-text">fotoğrafın neden basarısız olduğuna dair açıklama yapılabilecek alan.</p>
                                 </div>
@@ -35,7 +33,7 @@
 
 
                             <div class="col-md-4 design-content">
-                                <h1>Yeterli ışık</h1>
+                                <h1>Işık</h1>
                                 <p>Isıklandırma hakkında gerekli bilgiler girilebilecek bir açıklama alanı. Detaylı bilgiler de girilebilecek bir açıklama alanı. Fotoğraf açısı hakkında gerekli bilgiler girilebilecek bir açıklama alanı. Detaylı bilgiler de girilebilecek bir açıklama alanı</p>
 
                                 {{-- <div class="text-right controlsud">
@@ -55,7 +53,7 @@
                     <ul class="slides">
                         <li>
                             <div class="col-md-4 design-content">
-                                <h1>Bir miktar çözünürlük</h1>
+                                <h1>Netlik</h1>
                                 <p>Çözünürlük hakkında gerekli bilgiler girilebilecek bir açıklama alanı. Detaylı bilgiler de girilebilecek bir açıklama alanı. Fotoğraf açısı hakkında gerekli bilgiler girilebilecek bir açıklama alanı. Detaylı bilgiler de girilebilecek bir açıklama alanı.</p>
 
                                 {{-- <div class="text-right controls-medium">
@@ -66,7 +64,7 @@
 
                             <div class="col-md-4">
                                 <div class="flat-box">
-                                    <div class="colourway colour1"></div>
+                                    <img src="img/guide/net resim1.jpg" alt="Two pets" class="img-responsive">
                                     <p class="title">Doğru Örnek</p>
                                     <p class="feature-text">fotoğrafın neden basarılı olduğuna dair açıklama yapılabilecek alan.</p>
                                 </div>
@@ -74,7 +72,7 @@
 
                             <div class="col-md-4">
                                 <div class="flat-box">
-                                    <div class="colourway colour2"></div>
+                                    <img src="img/guide/net olmayan2.jpg" alt="Two pets" class="img-responsive">
                                     <p class="title">Kötü Örnek</p>
                                     <p class="feature-text">fotoğrafın neden basarısız olduğuna dair açıklama yapılabilecek alan.</p>
                                 </div>

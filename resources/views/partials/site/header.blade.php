@@ -1,8 +1,7 @@
-<nav class="navbar navbar-fixed-top navbar-brand-bow">
-    <!--We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns.-->
+<nav class="navbar navbar-brand-app">
     <div class="container">
         <div class="navbar-header">
-            <button aria-expanded="false" class="navbar-toggle collapsed" data-target="#main-nav" data-toggle="collapse" type="button">
+            <button aria-expanded="false" class="navbar-toggle collapsed" data-target="#nav-app" data-toggle="collapse" type="button">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -10,12 +9,11 @@
             </button>
 
             <a class="navbar-brand" href="{{ route('Site.Index') }}" title="Senin Kahramanın">
-                {{-- Logo --}}
                 {!! Html::image("img/logo-menu.png", "Logo", ["style" => "margin-top: -45px;"]) !!}
             </a>
         </div>
 
-        <div class="collapse navbar-collapse" id="main-nav">
+        <div class="collapse navbar-collapse" id="nav-app">
             <ul class="nav navbar-nav navbar-right">
                 <li class="{{ Active::route('Site.Index') }}">
                     <a href="{{ route('Site.Index') }}">{{ trans("menu.index") }}</a>
@@ -59,5 +57,3 @@
         </div>
     </div>
 </nav>
-
-<div class="menu-waypoint"></div>

@@ -1,3 +1,10 @@
+body {
+    font-family: "Lato";
+    color: #292929;
+    // padding-top: 130px; // activate this line if nav tag has "navbar-fixed-top" class
+    background-image: url("../../../img/bggreen.png");
+}
+
 .row.vertically-divide [class*='col-']:not(:last-child):after {
     background: #E1E1E1;
     width: 1px;
@@ -10,6 +17,39 @@
 }
 
 // Partials
+    // Site Header
+        .navbar-brand-app {
+            background-color: #ffffff;
+            /*padding: 15px 0 15px 0;*/
+            padding: 45px 0 45px;
+
+            ul {
+                a {
+                    color: #000;
+
+                    -webkit-transition: all 0.2s ease-out;
+                    -moz-transition: all 0.2s ease-out;
+                    -ms-transition: all 0.2s ease-out;
+                    -o-transition: all 0.2s ease-out;
+                    transition: all 0.2s ease-out;
+
+                    &:hover {
+                        color: #101010;
+                    }
+                }
+            }
+        }
+
+        .navbar-nav {
+            li {
+                &.active {
+                    a {
+                        background-color: #F8F8F8;
+                    }
+                }
+            }
+        }
+
     // Product
         .product {
             border: 1px solid #E1E1E1;

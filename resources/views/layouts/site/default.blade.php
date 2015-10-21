@@ -13,7 +13,7 @@
         {!! Html::style("css/layouts/font-awesome.min.css") !!}
 
         {!! Html::style("css/layouts/site/default.css") !!}
-        {!! Html::style("css/site/app.css") !!}
+{!! Html::style("css/site/style.min.css") !!}
 
         {!! Html::style("css/layouts/site/fonts.css") !!}
         {!! Html::style("css/layouts/site/bootstrap-social.css") !!}
@@ -57,7 +57,6 @@
 
         {!! Html::script("js/jquery-2.1.4.min.js") !!}
         {!! Html::script("js/layouts/bootstrap.min.js") !!}
-        {!! Html::script("js/jquery.waypoints.min.js") !!}
         {!! Html::script("js/layouts/site/default.js") !!}
         @yield("scripts")
     </body>

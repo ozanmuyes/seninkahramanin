@@ -13,11 +13,4 @@ $(function () {
             window.location.href = "/";
         });
     });
-
-    var waypoint = new Waypoint({
-        element: document.getElementById("menu-waypoint"),
-        handler: function(direction) {
-            console.log("Basic waypoint triggered to direction " + direction);
-        }
-    });
 });
