@@ -24,7 +24,7 @@
     }
 
     if (!isset($href)) {
-        $href = "#";
+        $href = "";
     }
 
     if (!isset($onClick)) {

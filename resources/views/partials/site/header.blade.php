@@ -1,5 +1,3 @@
-<div style="width: 100%; position: absolute; background-color: orange; opacity: 0.4; height: 150px;"></div>
-
 <nav class="navbar navbar-brand-app">
     <div class="container">
         <div class="navbar-header">

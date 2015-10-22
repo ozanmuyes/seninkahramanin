@@ -17,7 +17,7 @@
         {!! Html::style("css/layouts/site/fonts.css") !!}
         {!! Html::style("css/layouts/site/bootstrap-social.css") !!}
 
-        {!! Html::style("css/site/jquery.modal.css") !!}
+        {!! Html::style("css/colorpicker.css") !!}
 
         {{-- <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Advent+Pro:500&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
@@ -58,8 +58,7 @@
 
         {!! Html::script("js/jquery-2.1.4.min.js") !!}
         {!! Html::script("js/layouts/bootstrap.min.js") !!}
-        {{-- http://kylefox.ca/jquery-modal/examples/ --}}
-        {!! Html::script("js/layouts/site/jquery.modal.min.js") !!}
+        {!! Html::script("js/colorpicker.js") !!}
         {!! Html::script("js/layouts/site/default.js") !!}
         @yield("scripts")
     </body>

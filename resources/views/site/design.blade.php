@@ -4,9 +4,9 @@
 
 @section("content")
     <section class="row">
-        <h4>Cinsiyet</h4>
-
         <div class="col-md-8 col-md-offset-2">
+            <h2>Cinsiyet</h2>
+
             <div class="clearfix">
                 <div class="owl-navigation pull-right" for="sexes_carousel">
                     <a class="btn btn-default prev">
@@ -39,9 +39,9 @@
     </section>
 
     <section class="row">
-        <h4>Ürünler</h4>
-
         <div class="col-md-8 col-md-offset-2">
+            <h2>Ürünler</h2>
+
             <div class="clearfix">
                 <div class="owl-navigation pull-right" for="products_carousel">
                     <a class="btn btn-default prev">
@@ -65,17 +65,43 @@
                             "image" => [
                                 "path" => "product1.png",
                                 "alt" => "product1 Image"
-                            ],
-                            "buttons" => [
-                                [
-                                    "icon" => "fa fa-shopping-cart",
-                                    "href" => "/sepet/ekle/\slug",
-                                    "text" => "Sepete Ekle"
-                                ]
                             ]
                         ]
                     )
                 @endforeach
+            </div>
+        </div>
+    </section>
+
+    <section class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Yazılar ve Renkler</h2>
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="speech-baloon">Konuşma Balonu Yazısı</label>
+                        <input type="text" class="form-control" id="speech-baloon" placeholder="Konuşma Balonu Yok">
+                        <span id="helpBlock" class="help-block">En fazla 25 karakter girebilirsiniz. 0/25</span>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="pet-name">Evcil Hayvan İsmi</label>
+                        <input type="text" class="form-control" id="pet-name" placeholder="Evcil Hayvan İsmini Yazma">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="background-color">Arkaplan Rengi</label>
+                        <br>
+                        <button id="background-color" class="btn btn-default btn-block" type="button">&nbsp;</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
