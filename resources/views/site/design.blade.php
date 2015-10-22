@@ -77,7 +77,6 @@
         <div class="col-md-8 col-md-offset-2">
             <h2>Yazılar ve Renkler</h2>
             <br>
-            <br>
 
             <div class="row">
                 <div class="col-md-4">
@@ -103,6 +102,41 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Tarz</h2>
+            <br>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="style">Resmin Tarzını Seçin</label>
+                        <br>
+                        {{-- http://jsfiddle.net/KyleMit/0nevkwyn/ --}}
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-default">
+                                <input type="radio" id="q156" name="style" value="1" /> Kalem
+                            </label>
+
+                            <label class="btn btn-default">
+                                <input type="radio" id="q157" name="style" value="2" /> Boya
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Siparişi Tamamlayın</h2>
+            <br>
+
+            <a class="btn btn-success btn-lg" href="{{ route('Site.Design') }}" role="button">Sipariş Ver</a>
         </div>
     </section>
 @endsection
