@@ -37,6 +37,12 @@
 
         {{-- <script type="text/javascript" src="//s3.amazonaws.com/cc.silktide.com/cookieconsent.latest.min.js"></script> --}}
         <!-- End Cookie Consent plugin -->
+
+        <script type="text/javascript"> //<![CDATA[
+var tlJsHost = ((window.location.protocol == "https:") ? "https://secure.comodo.com/" : "http://www.trustlogo.com/");
+document.write(unescape("%3Cscript src='" + tlJsHost + "trustlogo/javascript/trustlogo.js' type='text/javascript'%3E%3C/script%3E"));
+//]]>
+</script>
     </head>
 
     <body>
@@ -56,6 +62,10 @@
 
         @yield("styles")
 
+        <script language="JavaScript" type="text/javascript">
+TrustLogo("https://seninkahramanin.com/img/comodo_secure_100x85_transp.png", "CL1", "none");
+</script>
+<a  href="https://www.positivessl.com/" id="comodoTL">Positive SSL</a>
         {!! Html::script("js/jquery-2.1.4.min.js") !!}
         {!! Html::script("js/layouts/bootstrap.min.js") !!}
         {!! Html::script("js/colorpicker.js") !!}
