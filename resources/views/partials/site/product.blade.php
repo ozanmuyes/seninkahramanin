@@ -34,13 +34,17 @@
     if (!isset($_selectable_type)) {
         $_selectable_type = "generic";
     }
+
+    if (!isset($_selectable_name)) {
+        $_selectable_name = null;
+    }
 ?>
 
 @if ($href !== null)
     @if ($_selectable)
-        <a href="{{ $href }}" class="selectable" data-selectable-type="{{ $_selectable_type }}">
+        <a href="{{ $href }}" class="selectable" data-selectable-type="{{ $_selectable_type }}" data-selectable-name="{{ $_selectable_name }}">
     @else
-        <a href="{{ $href }}" data-selectable-type="{{ $_selectable_type }}">
+        <a href="{{ $href }}" data-selectable-type="{{ $_selectable_type }}" data-selectable-name="{{ $_selectable_name }}">
     @endif
 @endif
 

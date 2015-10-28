@@ -29,7 +29,9 @@
                                 "path" => $sex->image->path,
                                 "alt" => $sex->image->alt
                             ],
-                            "_selectable" => !!$sex->_selectable
+                            "_selectable" => !!$sex->_selectable,
+                            "_selectable_type" => $sex->_selectable_type,
+                            "_selectable_name" => $sex->_selectable_name
                         ]
                     )
                 @endforeach
@@ -65,7 +67,9 @@
                                 "path" => "product1.png",
                                 "alt" => "product1 Image"
                             ],
-                            "_selectable" => !!$product->_selectable
+                            "_selectable" => !!$product->_selectable,
+                            "_selectable_type" => $product->_selectable_type,
+                            "_selectable_name" => $product->_selectable_name
                         ]
                     )
                 @endforeach
@@ -81,9 +85,21 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="speech-baloon">Konuşma Balonu Yazısı</label>
+                        {{-- <label for="speech-baloon">Konuşma Balonu Yazısı</label>
                         <input type="text" class="form-control" id="speech-baloon" placeholder="Konuşma Balonu Yok">
-                        <span id="helpBlock" class="help-block">En fazla 25 karakter girebilirsiniz. 0/25</span>
+                        <span id="helpBlock" class="help-block">En fazla 25 karakter girebilirsiniz. 0/25</span> --}}
+
+                        <label for="speech-baloon">Konuşma Balonu Yazısı</label>
+
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <input type="checkbox" id="speech-baloon-enabled" aria-label="Is Speech Balloon Active">&nbsp;Konuşma Balonu İstiyorum
+                            </span>
+
+                            <input type="text" id="speech-baloon" class="form-control" aria-label="Speech Balloon Text" placeholder="Konuşma Balonu Yazısı" disabled>
+                        </div>
+
+                        <span class="help-block">En fazla 25 karakter girebilirsiniz. 0/25</span>
                     </div>
                 </div>
 
@@ -136,7 +152,7 @@
             <h2>Siparişi Tamamlayın</h2>
             <br>
 
-            <a class="btn btn-success btn-lg" href="{{ route('Site.Design') }}" role="button">Sipariş Ver</a>
+            <a id="btnOrder" class="btn btn-success btn-lg" href="{{ route('Site.Design') }}" role="button">Sipariş Ver</a>
         </div>
     </section>
 @endsection
@@ -179,8 +195,40 @@
                 $(window[$(this.parentElement).attr("for")]).trigger("owl.prev");
             });
 
+            $('input:checkbox').removeAttr('checked');
+
             $(".owl-item>a.selectable").click(function () {
-console.log($(this));
+                $this = $(this);
+
+                $(".owl-item>a.selectable[data-selectable-type='" + $this.data("selectableType") + "']").each(function (index, elm) {
+                    $(elm).removeClass("selected");
+                });
+                $this.addClass("selected");
+            });
+
+            $("#speech-baloon-enabled").click(function () {
+                $("#speech-baloon").prop("disabled", !this.checked);
+            });
+
+            $("#btnOrder").click(function () {
+                var order = {};
+
+                // Resterize the "form"
+                //
+                $(".owl-item>a.selectable[data-selectable-type]").each(function (index, elm) {
+                    $elm = $(elm);
+
+                    if (!$elm.hasClass("selected")) {
+                        return;
+                    }
+
+                    order[$elm.data("selectableType")] = $elm.data("selectableName");
+                });
+
+
+
+console.log(order);
+                return false;
             });
         });
     </script>
