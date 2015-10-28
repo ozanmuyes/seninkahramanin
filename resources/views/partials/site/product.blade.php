@@ -24,19 +24,23 @@
     }
 
     if (!isset($href)) {
-        $href = "";
+        $href = "javascript: void(0)";
     }
 
-    if (!isset($onClick)) {
-        $onClick = null;
+    if (!isset($_selectable)) {
+        $_selectable = false;
+    }
+
+    if (!isset($_selectable_type)) {
+        $_selectable_type = "generic";
     }
 ?>
 
 @if ($href !== null)
-    @if ($onClick !== null)
-        <a href="{{ $href }}" onclick="{{ $onClick }}">
+    @if ($_selectable)
+        <a href="{{ $href }}" class="selectable" data-selectable-type="{{ $_selectable_type }}">
     @else
-        <a href="{{ $href }}">
+        <a href="{{ $href }}" data-selectable-type="{{ $_selectable_type }}">
     @endif
 @endif
 

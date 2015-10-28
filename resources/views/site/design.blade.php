@@ -29,8 +29,7 @@
                                 "path" => $sex->image->path,
                                 "alt" => $sex->image->alt
                             ],
-                            "href" => @$sex->href,
-                            "onClick" => $sex->onClick
+                            "_selectable" => !!$sex->_selectable
                         ]
                     )
                 @endforeach
@@ -65,7 +64,8 @@
                             "image" => [
                                 "path" => "product1.png",
                                 "alt" => "product1 Image"
-                            ]
+                            ],
+                            "_selectable" => !!$product->_selectable
                         ]
                     )
                 @endforeach
@@ -178,10 +178,10 @@
             $(".owl-navigation .prev").click(function() {
                 $(window[$(this.parentElement).attr("for")]).trigger("owl.prev");
             });
-        });
 
-        function selectSex() {
-            console.log();
-        }
+            $(".owl-item>a.selectable").click(function () {
+console.log($(this));
+            });
+        });
     </script>
 @endsection

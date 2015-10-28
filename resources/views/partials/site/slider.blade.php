@@ -1,10 +1,11 @@
 <section>
-    <div data-ride="carousel" class="carousel slide" id="carousel-example-generic">
+    <div data-ride="carousel" class="carousel slide" id="slider-main">
         <ol class="carousel-indicators">
-            <li data-slide-to="0" data-target="#carousel-example-generic" class="active"></li>
-            <li data-slide-to="1" data-target="#carousel-example-generic"></li>
-            <li data-slide-to="2" data-target="#carousel-example-generic"></li>
-            <li data-slide-to="3" data-target="#carousel-example-generic"></li>
+            <li data-slide-to="0" data-target="#slider-main" class="active"></li>
+            <li data-slide-to="1" data-target="#slider-main"></li>
+            <li data-slide-to="2" data-target="#slider-main"></li>
+            <li data-slide-to="3" data-target="#slider-main"></li>
+            <li data-slide-to="4" data-target="#slider-main"></li>
         </ol>
 
         <div role="listbox" class="carousel-inner">
@@ -23,14 +24,18 @@
             <div class="item">
                 <img alt="Fourth slide" src="img/slide/fourth.jpg">
             </div>
+
+            <div class="item">
+                <img alt="Fifth slide" src="img/slide/fifth.jpg">
+            </div>
         </div>
 
-        <a class="carousel-control left" href="#carousel-example-generic" role="button" data-slide="prev">
+        <a class="carousel-control left" href="#slider-main" role="button" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
 
-        <a class="carousel-control right" href="#carousel-example-generic" role="button" data-slide="next">
+        <a class="carousel-control right" href="#slider-main" role="button" data-slide="next">
             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>

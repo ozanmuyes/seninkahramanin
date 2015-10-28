@@ -39,7 +39,9 @@ class SiteController extends Controller
                     "path" => "female.jpg",
                     "alt" => "Kadın Resmi"
                 ],
-                "onClick" => "selectSex();return;"
+                "_selectable" => true,
+                "_selectable_type" => "sex",
+                "_selectable_name" => "felame"
             ],
             [
                 "name" => "Erkek",
@@ -47,10 +49,18 @@ class SiteController extends Controller
                     "path" => "male.jpg",
                     "alt" => "Erkek Resmi"
                 ],
-                "onClick" => "selectSex();return;"
+                "_selectable" => true,
+                "_selectable_type" => "sex",
+                "_selectable_name" => "male"
             ]
         ];
-        $products = App\Product::all();
+        $products = App\Product::all()->map(function ($item, $key) {
+            $item["_selectable"] = true;
+            $item["_selectable_type"] = "product";
+            $item["_selectable_name"] = $item->name;
+
+            return $item;
+        });
 
         return view("site.design")->with([
             "sexes" => json_decode(json_encode($sexes)),
