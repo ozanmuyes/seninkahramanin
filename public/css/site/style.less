@@ -239,6 +239,7 @@ footer {
                 img {
                     border-radius: 5px 5px 0 0;
                     border-bottom: 1px solid #E1E1E1;
+                    background-color: white;
                 }
             }
         }
@@ -288,6 +289,18 @@ footer {
             .product {
                 background-color: #FBB600;
                 color: white;
+            }
+        }
+
+        a {
+            &:focus,
+            &:hover {
+                text-decoration: none;
+                color: #439d4e;
+
+                .product {
+                    background-color: #FFDC80;
+                }
             }
         }
     }

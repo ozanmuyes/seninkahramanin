@@ -54,7 +54,7 @@
     </div>
 
     <div class="info">
-        <h5>{{ $name }}</h5>
+        <h4>{{ $name }}</h4>
 
         @if ($buttons)
             <hr>

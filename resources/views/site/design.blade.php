@@ -85,34 +85,27 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
-                        {{-- <label for="speech-baloon">Konuşma Balonu Yazısı</label>
-                        <input type="text" class="form-control" id="speech-baloon" placeholder="Konuşma Balonu Yok">
-                        <span id="helpBlock" class="help-block">En fazla 25 karakter girebilirsiniz. 0/25</span> --}}
-
                         <label for="speech-baloon">Konuşma Balonu Yazısı</label>
-
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                <input type="checkbox" id="speech-baloon-enabled" aria-label="Is Speech Balloon Active">&nbsp;Konuşma Balonu İstiyorum
-                            </span>
-
-                            <input type="text" id="speech-baloon" class="form-control" aria-label="Speech Balloon Text" placeholder="Konuşma Balonu Yazısı" disabled>
-                        </div>
-
-                        <span class="help-block">En fazla 25 karakter girebilirsiniz. 0/25</span>
+                        <br>
+                        <input type="checkbox" id="speech-baloon-enabled" aria-label="Is Speech Balloon Active">&nbsp;Konuşma Balonu İstiyorum
+                        <input type="text" class="form-control" id="speech-baloon" disabled>
+                        <span id="helpBlock" class="help-block">En fazla 25 karakter girebilirsiniz. 0/25</span>
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="pet-name">Evcil Hayvan İsmi</label>
-                        <input type="text" class="form-control" id="pet-name" placeholder="Evcil Hayvan İsmini Yazma">
+                        <br>
+                        <input type="checkbox" id="pet-name-enabled" aria-label="Is Speech Balloon Active">&nbsp;Evcil Hayvanımın İsmi Yazsın
+                        <input type="text" class="form-control" id="pet-name" disabled>
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="background-color">Arkaplan Rengi</label>
+                        <br>
                         <br>
                         <button id="background-color" class="btn btn-default btn-block" type="button">&nbsp;</button>
                     </div>
@@ -208,6 +201,10 @@
 
             $("#speech-baloon-enabled").click(function () {
                 $("#speech-baloon").prop("disabled", !this.checked);
+            });
+
+            $("#pet-name-enabled").click(function () {
+                $("#pet-name").prop("disabled", !this.checked);
             });
 
             $("#btnOrder").click(function () {
