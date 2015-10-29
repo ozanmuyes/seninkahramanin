@@ -55,7 +55,8 @@
                 </div>
             </div>
 
-            <div id="products_carousel" class="owl-carousel" data-owl='{"items": 4, "pagination": false}'>
+            <div id="products_carousel" class="owl-carousel" data-owl='{"items": 5, "pagination": false}'>
+                <?php $i = 0; ?>
                 @foreach ($products as $product)
                     @include(
                         "partials.site.product",
@@ -64,7 +65,7 @@
                             "slug" => $product->slug,
                             "name" => $product->name,
                             "image" => [
-                                "path" => "product1.png",
+                                "path" => "model" . $i++ % 6 . ".jpg",
                                 "alt" => "product1 Image"
                             ],
                             "_selectable" => !!$product->_selectable,
@@ -201,6 +202,10 @@
 
             $("#speech-baloon-enabled").click(function () {
                 $("#speech-baloon").prop("disabled", !this.checked);
+            });
+
+            $("#speech-baloon").change(function () {
+                console.log($(this).val());
             });
 
             $("#pet-name-enabled").click(function () {
