@@ -1,5 +1,5 @@
 <?php
-    // dd($products);
+// dd($products);
     $total = 0;
 ?>
 
@@ -52,20 +52,21 @@
                                     </td>
 
                                     {{-- <td>17 Haziran 2015</td> --}}
-                                    <td>{{ $product["attributes"]["sex"] }}</td>
+                                    <td>{{ $product["attributes"]["sex"]["name"] }}</td>
+                                    {{-- <td>{{ $product["attributes"]["sex"]["name"] }}</td> --}}
                                     <td>{{ $product["quantity"] }}</td>
                                     <?php $total += $product["price"]; ?>
                                     <td>{{ $product["price"] . " " . mb_strtoupper($product["attributes"]["currency"]) }}</td>
 
                                     <td>
-                                        <button type="button" class="btn btn-default btn-sm">
+                                        {{-- <button type="button" class="btn btn-default btn-sm">
                                             <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                                        </button>
+                                        </button> --}}
+                                        {!! link_to_route("Site.Cart.Remove", "Sil", $product["id"], ["title" => "Ürünü sepetten kaldır"]) !!}
                                     </td>
 
 
                                     {{-- <td>Siparis</td> --}}
-
                                 </tr>
                             @endforeach
                         </tbody>

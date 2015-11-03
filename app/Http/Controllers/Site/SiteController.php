@@ -41,7 +41,7 @@ class SiteController extends Controller
                 ],
                 "_selectable" => true,
                 "_selectable_type" => "sex",
-                "_selectable_name" => "felame"
+                "_selectable_name" => "Kadın"
             ],
             [
                 "name" => "Erkek",
@@ -51,7 +51,7 @@ class SiteController extends Controller
                 ],
                 "_selectable" => true,
                 "_selectable_type" => "sex",
-                "_selectable_name" => "male"
+                "_selectable_name" => "Erkek"
             ]
         ];
         $products = App\Product::all()->map(function ($item, $key) {

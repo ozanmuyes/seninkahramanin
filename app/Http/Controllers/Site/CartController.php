@@ -43,7 +43,22 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $inputs = $request->input();
+        $product = Product::where("name", $inputs["product"]["name"])->first();
+        $price = $product->price;
+
+        $inputs["product"]["id"] = $product->id;
+        $inputs["image"]["path"] = $product->images[0]->path;
+        $inputs["image"]["alt"] = $product->images[0]->alt;
+        $inputs["currency"] = $price->currency;
+
+        Cart::add(
+            $product->id,
+            $product->name,
+            $price->withoutCurrency,
+            1,
+            $inputs
+        );
     }
 
     /**
@@ -93,6 +108,19 @@ class CartController extends Controller
     }
 
     /**
+     * Remove one item from cart
+     *
+     * @param  Item ID $id
+     * @return Response
+     */
+    public function remove($id)
+    {
+        Cart::remove($id);
+
+        return redirect()->route("Site.Cart.Index");
+    }
+
+    /**
      * Clear cart
      *
      * @return Response
@@ -101,7 +129,7 @@ class CartController extends Controller
     {
         Cart::clear();
 
-        return redirect()->route("Cart.Index");
+        return redirect()->route("Site.Cart.Index");
     }
 
     public function getCheckout()

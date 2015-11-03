@@ -36,9 +36,9 @@
     }
 ?>
 
-@if ($label !== true)
+@unless (!!$label === false)
     {!! Form::label("image-input", $label) !!}
-@endif
+@endunless
 
 {!! Form::file("image-input", ["id" => "image-input", "accept" => "image/jpeg,image/png,image/gif", "class" => "sr-only"]) !!}
 
@@ -128,6 +128,8 @@
 
                                 $image.one("built.cropper", function () {
                                     URL.revokeObjectURL(blobURL); // Revoke when load complete
+
+console.log("image loaded");
                                 }).cropper("reset").cropper("replace", blobURL);
 
                                 $imageInput.val("");
@@ -154,13 +156,7 @@
                 });
 
                 $form.submit(function () {
-                    // Convert Cropper image canvas to data URL and assign it to proper input element's value
-                    //
-                    var imageType = "image/jpeg",
-                        imageQuality = 0.9,
-                        $imageDataURL = $image.cropper('getCroppedCanvas').toDataURL(imageType, imageQuality);
-
-                    $imageHidden.val($imageDataURL);
+                    $imageHidden.val(getImageDataURL());
 
                     // Remove unnecessary input elements
                     //
@@ -168,5 +164,15 @@
 
                     return true;
                 });
+
+                var getImageDataURL = function () {
+                    // Convert Cropper image canvas to data URL and assign it to proper input element's value
+                    //
+                    var imageType = "image/jpeg",
+                        imageQuality = 0.9,
+                        imageDataURL = $image.cropper('getCroppedCanvas').toDataURL(imageType, imageQuality);
+
+                    return imageDataURL;
+                };
     </script>
 @endsection

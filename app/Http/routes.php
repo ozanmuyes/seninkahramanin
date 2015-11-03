@@ -86,6 +86,8 @@ Route::group(
             function () {
                 Route::get("/", ["as" => "Index", "uses" => "CartController@index"]);
 
+                Route::post("ekle", ["uses" => "CartController@store"]);
+
                 Route::group(
                     [
                         "prefix" => "add",
@@ -99,6 +101,7 @@ Route::group(
                     }
                 );
 
+                Route::get("sil/{id}", ["as" => "Remove", "uses" => "CartController@remove"]);
                 Route::get("clear", ["as" => "Clear", "uses" => "CartController@clear"]);
 
                 Route::get("ode", ["as" => "Checkout", "uses" => "CartController@getCheckout"]);

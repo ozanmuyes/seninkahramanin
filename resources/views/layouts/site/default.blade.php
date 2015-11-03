@@ -17,8 +17,6 @@
         {!! Html::style("css/layouts/site/fonts.css") !!}
         {!! Html::style("css/layouts/site/bootstrap-social.css") !!}
 
-        {!! Html::style("css/colorpicker.css") !!}
-
         {{-- <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Advent+Pro:500&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'> --}}
@@ -68,7 +66,6 @@ TrustLogo("https://seninkahramanin.com/img/comodo_secure_100x85_transp.png", "CL
 <a  href="https://www.positivessl.com/" id="comodoTL">Positive SSL</a>
         {!! Html::script("js/jquery-2.1.4.min.js") !!}
         {!! Html::script("js/layouts/bootstrap.min.js") !!}
-        {!! Html::script("js/colorpicker.js") !!}
         {!! Html::script("js/layouts/site/default.js") !!}
         @yield("scripts")
     </body>

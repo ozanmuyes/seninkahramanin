@@ -3,7 +3,7 @@
 @section("title", trans("menu.design"))
 
 @section("content")
-    <section class="row">
+    <section id="section-sexes" class="row">
         <div class="col-md-8 col-md-offset-2">
             <h2>Cinsiyet</h2>
 
@@ -39,7 +39,7 @@
         </div>
     </section>
 
-    <section class="row">
+    <section id="section-products" class="row">
         <div class="col-md-8 col-md-offset-2">
             <h2>Ürünler</h2>
 
@@ -75,10 +75,23 @@
                     )
                 @endforeach
             </div>
+
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="product-size">Beden</label>
+
+                        <select id="product-size" class="form-control"></select>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="row">
+    <section id="section-texts-and-colors" class="row">
         <div class="col-md-8 col-md-offset-2">
             <h2>Yazılar ve Renkler</h2>
             <br>
@@ -90,7 +103,8 @@
                         <br>
                         <input type="checkbox" id="speech-baloon-enabled" aria-label="Is Speech Balloon Active">&nbsp;Konuşma Balonu İstiyorum
                         <input type="text" class="form-control" id="speech-baloon" disabled>
-                        <span id="helpBlock" class="help-block">En fazla 25 karakter girebilirsiniz. 0/25</span>
+                        <span id="helpBlock" class="help-block">En fazla 25 karakter girebilirsiniz.</span>
+                        {{-- <span id="helpBlock" class="help-block">En fazla 25 karakter girebilirsiniz. 0/25</span> --}}
                     </div>
                 </div>
 
@@ -115,7 +129,7 @@
         </div>
     </section>
 
-    <section class="row">
+    <section id="section-image-style" class="row">
         <div class="col-md-8 col-md-offset-2">
             <h2>Tarz</h2>
             <br>
@@ -126,16 +140,39 @@
                         <label for="style">Resmin Tarzını Seçin</label>
                         <br>
                         {{-- http://jsfiddle.net/KyleMit/0nevkwyn/ --}}
-                        <div class="btn-group" data-toggle="buttons">
+                        <div id="style-buttons" class="btn-group" data-toggle="buttons">
                             <label class="btn btn-default">
-                                <input type="radio" id="q156" name="style" value="1" /> Kalem
+                                <input type="radio" value="kalem" /> Kalem
                             </label>
 
                             <label class="btn btn-default">
-                                <input type="radio" id="q157" name="style" value="2" /> Boya
+                                <input type="radio" value="boya" /> Boya
                             </label>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-image" class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Resim</h2>
+            <br>
+
+            <div class="row">
+                <div class="col-md-8">
+                    @include(
+                        "partials.admin.cropper",
+                        [
+                            "label" => false,
+                            "name" => "image",
+                            "uploadButtonText" => "Resim Yükle",
+                            "formSelector" => "form",
+                            "aspectRatio" => "16/9",
+                            "autoCropArea" => 0.8
+                        ]
+                    )
                 </div>
             </div>
         </div>
@@ -156,29 +193,56 @@
 
     {!! Html::style("css/owl.carousel.css") !!}
     {!! Html::style("css/owl.theme.css") !!}
+    {!! Html::style("css/colorpicker.css") !!}
 @endsection
 
 @section("scripts")
     @parent
 
     {!! Html::script("js/owl.carousel.min.js") !!}
+    {!! Html::script("js/jquery.ddslick.min.js") !!}
+    {!! Html::script("js/colorpicker.js") !!}
 
     <script>
+        var order = {
+            sex: {
+                name: null
+            },
+            product: {
+                name: null,
+                size: null
+            },
+            speechBaloon: {
+                enabled: false,
+                text: null
+            },
+            petName: {
+                enabled: false,
+                text: null
+            },
+            backgroundColor: {
+                hsb: {
+                    h: 0,
+                    s: 0,
+                    b: 100,
+                },
+                hex: "FFFFFF",
+                rgb: {
+                    r: 255,
+                    g: 255,
+                    b: 255
+                }
+            },
+            image: {
+                style: null,
+                data: null
+            }
+        };
+
         $(document).ready(function() {
             $(".owl-carousel").each(function (idx, elm) {
                 window[elm.id] = $(elm).owlCarousel(JSON.parse(elm.getAttribute("data-owl")));
             });
-
-            // var sexes_carousel = $("#sexes_carousel"),
-            //     products_carousel = $("#products_carousel");
-
-            // sexes_carousel.owlCarousel({
-            //     items: 4
-            // });
-
-            // products_carousel.owlCarousel({
-            //     items: 4
-            // });
 
             // Custom Navigation Events
             $(".owl-navigation .next").click(function() {
@@ -189,7 +253,10 @@
                 $(window[$(this.parentElement).attr("for")]).trigger("owl.prev");
             });
 
-            $('input:checkbox').removeAttr('checked');
+            $("#product-size").val("Normal");
+            $("input:checkbox").removeAttr("checked");
+            $("#speech-baloon").prop("disabled", "disabled").val("");
+            $("#pet-name").prop("disabled", "disabled").val("");
 
             $(".owl-item>a.selectable").click(function () {
                 $this = $(this);
@@ -198,38 +265,126 @@
                     $(elm).removeClass("selected");
                 });
                 $this.addClass("selected");
+
+                order[$this.data("selectableType")]["name"] = $this.data("selectableName");
+            });
+
+            var productSizes = [
+                {
+                    text: "Çok Küçük",
+                    value: 1,
+                    selected: false,
+                    description: "Göğüs: 48<br>Boy: 67"
+                },
+                {
+                    text: "Küçük",
+                    value: 2,
+                    selected: false,
+                    description: "Göğüs: 51<br>Boy: 68"
+                },
+                {
+                    text: "Orta",
+                    value: 3,
+                    selected: true,
+                    description: "Göğüs: 53<br>Boy: 70"
+                },
+                {
+                    text: "Büyük",
+                    value: 4,
+                    selected: false,
+                    description: "Göğüs: 55<br>Boy: 73"
+                },
+                {
+                    text: "Çok Büyük",
+                    value: 5,
+                    selected: false,
+                    description: "Göğüs: 57<br>Boy: 75"
+                }
+            ];
+            var $productSize = $("#product-size").ddslick({
+                data: productSizes,
+                width: 400,
+                onSelected: function (selected) {
+                    order.product.size = selected.selectedData.value;
+                }
             });
 
             $("#speech-baloon-enabled").click(function () {
                 $("#speech-baloon").prop("disabled", !this.checked);
+
+                order.speechBaloon.enabled = !order.speechBaloon.enabled;
             });
 
-            $("#speech-baloon").change(function () {
-                console.log($(this).val());
+            $("#speech-baloon").bind("change paste keyup", function (e) {
+                order.speechBaloon.text = $(this).val();
             });
 
             $("#pet-name-enabled").click(function () {
                 $("#pet-name").prop("disabled", !this.checked);
+
+                order.petName.enabled = !order.petName.enabled;
+            });
+
+            $("#pet-name").bind("change paste keyup", function (e) {
+                order.petName.text = $(this).val();
+            });
+
+            var backgroundColorButton = $("#background-color");
+            backgroundColorButton.ColorPicker({
+                onChange: function (hsb, hex, rgb, el) {
+                    backgroundColorButton.css("background-color", "#" + hex);
+
+                    order.backgroundColor.hsb = hsb;
+                    order.backgroundColor.hex = hex;
+                    order.backgroundColor.rgb = rgb;
+                }
             });
 
             $("#btnOrder").click(function () {
-                var order = {};
+                if (order.sex.name === null) {
+                    alert("Lütfen cinsiyet seçimi yapın.");
 
-                // Resterize the "form"
-                //
-                $(".owl-item>a.selectable[data-selectable-type]").each(function (index, elm) {
-                    $elm = $(elm);
+                    $(window).scrollTop($("#section-sexes").position().top);
 
-                    if (!$elm.hasClass("selected")) {
-                        return;
+                    return false;
+                }
+
+                if (order.product.name === null) {
+                    alert("Lütfen ürün seçimi yapın.");
+
+                    $(window).scrollTop($("#section-products").position().top);
+
+                    return false;
+                }
+
+                var $activeStyleButton = $("#style-buttons>label.active");
+                if ($activeStyleButton.length == 1) {
+                    order.image.style = $activeStyleButton.children("input").val()
+                } else {
+                    alert("Lütfen resim tarzı seçimini yapın.");
+
+                    $(window).scrollTop($("#section-image-style").position().top);
+
+                    return false;
+                }
+
+                order.image.data = getImageDataURL();
+
+                $.ajax({
+                    type: "POST",
+                    url: "/sepet/ekle",
+                    data: JSON.stringify(order),
+                    dataType: "json",
+                    contentType: "application/json",
+                    complete: function (data, status, xhr) {
+// console.log(data);
+                        window.location = "/";
+                    },
+                    beforeSend: function (xhr) {
+                        xhr.setRequestHeader("X-CSRF-TOKEN", $("meta[name='token']").attr("content"));
                     }
-
-                    order[$elm.data("selectableType")] = $elm.data("selectableName");
                 });
 
-
-
-console.log(order);
                 return false;
             });
         });
