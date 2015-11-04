@@ -271,31 +271,31 @@
 
             var productSizes = [
                 {
-                    text: "Çok Küçük",
+                    text: "XS",
                     value: 1,
                     selected: false,
                     description: "Göğüs: 48<br>Boy: 67"
                 },
                 {
-                    text: "Küçük",
+                    text: "S",
                     value: 2,
                     selected: false,
                     description: "Göğüs: 51<br>Boy: 68"
                 },
                 {
-                    text: "Orta",
+                    text: "M",
                     value: 3,
                     selected: true,
                     description: "Göğüs: 53<br>Boy: 70"
                 },
                 {
-                    text: "Büyük",
+                    text: "L",
                     value: 4,
                     selected: false,
                     description: "Göğüs: 55<br>Boy: 73"
                 },
                 {
-                    text: "Çok Büyük",
+                    text: "XL",
                     value: 5,
                     selected: false,
                     description: "Göğüs: 57<br>Boy: 75"

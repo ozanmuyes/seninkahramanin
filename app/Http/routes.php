@@ -78,6 +78,14 @@ Route::group(
 
         Route::get("hakkimizda", ["as" => "AboutUs", "uses" => "SiteController@aboutUs"]);
 
+        Route::get("gizlilik-taahhudu", ["as" => "PrivacyCommitment", function () {
+            return view("site.privacy_commitment");
+        }]);
+
+        Route::get("mesafeli-satis-sozlesmesi", ["as" => "ConsumerContract", function () {
+            return view("site.consumer_contract");
+        }]);
+
         Route::group(
             [
                 "prefix" => "sepet",
