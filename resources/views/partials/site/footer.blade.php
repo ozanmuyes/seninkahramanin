@@ -11,15 +11,19 @@
                 </div>
 
                 <div class="col-md-4">
-                    <li>Bİze Ulaşın</li>
-                    <li><a href="mailto:info@seninkahramanin.com">İnfo@seninkahramanin.com</a></li>
-                    <li><a href="https://seninkahramanin.com">senİnkahramanİn.com</a></li>
+                    <ul>
+                        <li>Bİze Ulaşın</li>
+                        <li><a href="mailto:info@seninkahramanin.com">İnfo@seninkahramanin.com</a></li>
+                        <li><a href="https://seninkahramanin.com">senİnkahramanİn.com</a></li>
+                    </ul>
                 </div>
 
                 <div class="col-md-4">
-                    <li>Senİn Kahramanın</li>
-                    <li>Hayvan sever,</li>
-                    <li>Memnunİyetİnİze önem verİr.</li>
+                    <ul>
+                        <li>Senİn Kahramanın</li>
+                        <li>Hayvan sever,</li>
+                        <li>Memnunİyetİnİze önem verİr.</li>
+                    </ul>
                 </div>
             </div>
         </div>

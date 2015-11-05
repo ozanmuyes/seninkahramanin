@@ -23,9 +23,7 @@
 
             <section class="login-form">
                 {!! Form::open(["class" => "form-login"]) !!}
-                    BURAYA LOGO(!) GELECEK
-
-                   
+                    {!! Html::image("img/logo-menu.png", "Seninkahramanin Logo", ["class" => "img-responsive"]) !!}
 
                     <div class="form-group">
                         {!! Form::label("email", "E-Mail Adresiniz") !!}
@@ -36,8 +34,6 @@
                         {!! Form::label("password", "Şifreniz") !!}
                         {!! Form::password("password", ["class" => "form-control input-lg", "required" => true]) !!}
                     </div>
-
-                    
 
                     {!! Form::submit("Giriş", ["class" => "btn btn-lg btn-success btn-block"]) !!}
 
@@ -55,23 +51,20 @@
                         <i class="fa fa-twitter"></i> Sign in with Twitter
                     </a>
                     <br><br><br>
-                    
+
                     <div class="row">
 
-                        <div class="col-md-6">                       
+                        <div class="col-md-6">
                             <img src="img/password.jpg" class="img-responsive" style="width:50px; height:50px"> <a href="#">Şifremi Unuttum</a>
                         </div>
 
-                        <div class="col-md-6">                       
+                        <div class="col-md-6">
                             <img src="img/signup.png" class="img-responsive" style="width:50px; height:50px"> <a href="#">Kayıt Ol</a>
                         </div>
 
                     </div>
 
-
-                    
-
-                    {{--  
+                    {{--
                     {!! link_to("/kullanici/sifremi-unuttum", "Şifremi Unuttum") !!}
                     <br>
                     {!! link_to("/kayit", "Kayıt Ol") !!}

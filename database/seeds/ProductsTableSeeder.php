@@ -16,64 +16,94 @@ class ProductsTableSeeder extends Seeder
         $products = [
             [
                 "size_id" => 1,
-                "name" => "Foo 1",
-                "sex" => "male"
+                "name" => "Atlet",
+                "sex" => "female"
             ],
             [
                 "size_id" => 6,
-                "name" => "Bar 1",
+                "name" => "T-Shirt",
                 "sex" => "female"
             ],
             [
                 "size_id" => 3,
-                "name" => "Baz 1",
-                "sex" => "female"
-            ],
-            [
-                "size_id" => 11,
-                "name" => "Bar 2",
-                "sex" => "male"
-            ],
-            [
-                "size_id" => 7,
-                "name" => "Qux 1",
+                "name" => "Sweatshirt",
                 "sex" => "female"
             ],
             [
                 "size_id" => 1,
-                "name" => "Baz 2",
+                "name" => "Atlet",
                 "sex" => "male"
             ],
             [
-                "size_id" => 9,
-                "name" => "Thud 1",
-                "sex" => "child (unisex)"
-            ],
-            [
-                "size_id" => 8,
-                "name" => "Bar 3",
-                "sex" => "female"
-            ],
-            [
-                "size_id" => 7,
-                "name" => "Baz 3",
-                "sex" => "female"
-            ],
-            [
-                "size_id" => 8,
-                "name" => "Qux 2",
-                "sex" => "child (unisex)"
-            ],
-            [
-                "size_id" => 11,
-                "name" => "Foo 2",
+                "size_id" => 6,
+                "name" => "T-Shirt",
                 "sex" => "male"
             ],
             [
-                "size_id" => 12,
-                "name" => "Baz 4",
-                "sex" => "female"
+                "size_id" => 3,
+                "name" => "Sweatshirt",
+                "sex" => "male"
             ]
+            // [
+            //     "size_id" => 1,
+            //     "name" => "Foo 1",
+            //     "sex" => "male"
+            // ],
+            // [
+            //     "size_id" => 6,
+            //     "name" => "Bar 1",
+            //     "sex" => "female"
+            // ],
+            // [
+            //     "size_id" => 3,
+            //     "name" => "Baz 1",
+            //     "sex" => "female"
+            // ],
+            // [
+            //     "size_id" => 11,
+            //     "name" => "Bar 2",
+            //     "sex" => "male"
+            // ],
+            // [
+            //     "size_id" => 7,
+            //     "name" => "Qux 1",
+            //     "sex" => "female"
+            // ],
+            // [
+            //     "size_id" => 1,
+            //     "name" => "Baz 2",
+            //     "sex" => "male"
+            // ],
+            // [
+            //     "size_id" => 9,
+            //     "name" => "Thud 1",
+            //     "sex" => "child (unisex)"
+            // ],
+            // [
+            //     "size_id" => 8,
+            //     "name" => "Bar 3",
+            //     "sex" => "female"
+            // ],
+            // [
+            //     "size_id" => 7,
+            //     "name" => "Baz 3",
+            //     "sex" => "female"
+            // ],
+            // [
+            //     "size_id" => 8,
+            //     "name" => "Qux 2",
+            //     "sex" => "child (unisex)"
+            // ],
+            // [
+            //     "size_id" => 11,
+            //     "name" => "Foo 2",
+            //     "sex" => "male"
+            // ],
+            // [
+            //     "size_id" => 12,
+            //     "name" => "Baz 4",
+            //     "sex" => "female"
+            // ]
         ];
 
         foreach ($products as $product) {

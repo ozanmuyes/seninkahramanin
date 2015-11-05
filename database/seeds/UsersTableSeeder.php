@@ -41,6 +41,15 @@ class UsersTableSeeder extends Seeder
                 "email" => "cemunlu27@gmail.com",
                 "password" => "cemunlu27@gmail.com",
                 "role" => "user"
+            ],
+            [
+                "twitter_id" => null,
+                "facebook_id" => null,
+                "first_name" => "Test",
+                "last_name" => "Account",
+                "email" => "test@account.com",
+                "password" => "test",
+                "role" => "user"
             ]
         ];
 

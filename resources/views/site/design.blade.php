@@ -55,7 +55,7 @@
                 </div>
             </div>
 
-            <div id="products_carousel" class="owl-carousel" data-owl='{"items": 5, "pagination": false}'>
+            <div id="products_carousel" class="owl-carousel" data-owl='{"items": 6, "itemsMobile": 2, "pagination": false}'>
                 <?php $i = 0; ?>
                 @foreach ($products as $product)
                     @include(
@@ -143,10 +143,12 @@
                         <div id="style-buttons" class="btn-group" data-toggle="buttons">
                             <label class="btn btn-default">
                                 <input type="radio" value="kalem" /> Kalem
+                                {!! Html::image("img/design/kalem.jpg", "Kalem", ["class" => "img-responsive"]) !!}
                             </label>
 
                             <label class="btn btn-default">
                                 <input type="radio" value="boya" /> Boya
+                                {!! Html::image("img/design/boya.jpg", "Kalem", ["class" => "img-responsive"]) !!}
                             </label>
                         </div>
                     </div>
@@ -181,8 +183,7 @@
         <div class="col-md-8 col-md-offset-2">
             <h2>Siparişi Tamamlayın</h2>
             <br>
-
-            <a id="btnOrder" class="btn btn-success btn-lg" href="{{ route('Site.Design') }}" role="button">Sipariş Ver</a>
+            <a id="btnOrder" class="btn btn-success btn-lg" href="{{ route('Site.Design') }}" role="button">Sepete Ekle</a>
         </div>
     </section>
 @endsection
@@ -252,7 +253,7 @@
                 $(window[$(this.parentElement).attr("for")]).trigger("owl.prev");
             });
 
-            $("#product-size").val("Normal");
+            $("#product-size").val("M");
             $("input:checkbox").removeAttr("checked");
             $("#speech-baloon").prop("disabled", "disabled").val("");
             $("#pet-name").prop("disabled", "disabled").val("");
@@ -302,7 +303,7 @@
             ];
             var $productSize = $("#product-size").ddslick({
                 data: productSizes,
-                width: 400,
+                // width: 400,
                 onSelected: function (selected) {
                     order.product.size = selected.selectedData.value;
                 }

@@ -54,6 +54,10 @@ section {
     margin-bottom: 2em;
 }
 
+.padding-bottom-sm {
+    padding-bottom: 1em;
+}
+
 .no-padding-lr {
     padding-left: 0;
     padding-right: 0;
@@ -133,7 +137,9 @@ footer {
             text-transform: uppercase;
             font-weight: 600;
             letter-spacing: 2px;
-            padding: 20px 40px 0;
+            padding-top: 20px;
+            padding-left: 40px;
+            padding-left: 40px;
         }
 
         .feature-text {
@@ -317,3 +323,16 @@ footer {
             }
         }
     }
+
+// Experimental - Image Radio
+label > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #f00;
+}

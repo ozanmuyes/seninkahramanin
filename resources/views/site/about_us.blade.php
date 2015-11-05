@@ -28,14 +28,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="col-md-4">
-                        <h3 class="about-motto">
-                            <img src="http://placehold.it/250x300">
-
-                            <br>
-                            <br>
-
-                            Biz Kimiz?
-                        </h3>
+                        <h3 class="about-motto">Biz Kimiz?</h3>
 
                         <br>
                         <br>
@@ -48,14 +41,7 @@
                     </div>
 
                     <div class="col-md-4">
-                        <h3 class="about-motto">
-                            <img src="http://placehold.it/250x300">
-
-                            <br>
-                            <br>
-
-                            Ne Yapıyoruz?
-                        </h3>
+                        <h3 class="about-motto">Ne Yapıyoruz?</h3>
 
                         <br>
                         <br>
@@ -67,14 +53,7 @@
                     </div>
 
                     <div class="col-md-4">
-                        <h3 class="about-motto">
-                            <img src="http://placehold.it/250x300">
-
-                            <br>
-                            <br>
-
-                            Misyonumuz?
-                        </h3>
+                        <h3 class="about-motto">Misyonumuz?</h3>
 
                         <br>
                         <br>
