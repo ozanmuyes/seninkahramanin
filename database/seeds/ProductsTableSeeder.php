@@ -21,7 +21,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 "size_id" => 2,
-                "name" => "Kadın T-Shirt",
+                "name" => "Kadın Tişört",
                 "sex" => "female"
             ],
             [
@@ -36,7 +36,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 "size_id" => 5,
-                "name" => "Erkek T-Shirt",
+                "name" => "Erkek Tişört",
                 "sex" => "male"
             ],
             [
