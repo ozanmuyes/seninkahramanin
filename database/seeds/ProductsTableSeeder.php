@@ -16,32 +16,32 @@ class ProductsTableSeeder extends Seeder
         $products = [
             [
                 "size_id" => 1,
-                "name" => "Atlet",
+                "name" => "Kadın Atlet",
                 "sex" => "female"
             ],
             [
                 "size_id" => 2,
-                "name" => "T-Shirt",
+                "name" => "Kadın T-Shirt",
                 "sex" => "female"
             ],
             [
                 "size_id" => 3,
-                "name" => "Sweatshirt",
+                "name" => "Kadın Sweatshirt",
                 "sex" => "female"
             ],
             [
                 "size_id" => 4,
-                "name" => "Atlet",
+                "name" => "Erkek Atlet",
                 "sex" => "male"
             ],
             [
                 "size_id" => 5,
-                "name" => "T-Shirt",
+                "name" => "Erkek T-Shirt",
                 "sex" => "male"
             ],
             [
                 "size_id" => 6,
-                "name" => "Sweatshirt",
+                "name" => "Erkek Sweatshirt",
                 "sex" => "male"
             ]
             // [
