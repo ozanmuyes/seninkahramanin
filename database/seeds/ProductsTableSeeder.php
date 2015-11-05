@@ -20,7 +20,7 @@ class ProductsTableSeeder extends Seeder
                 "sex" => "female"
             ],
             [
-                "size_id" => 6,
+                "size_id" => 2,
                 "name" => "T-Shirt",
                 "sex" => "female"
             ],
@@ -30,17 +30,17 @@ class ProductsTableSeeder extends Seeder
                 "sex" => "female"
             ],
             [
-                "size_id" => 1,
+                "size_id" => 4,
                 "name" => "Atlet",
                 "sex" => "male"
             ],
             [
-                "size_id" => 6,
+                "size_id" => 5,
                 "name" => "T-Shirt",
                 "sex" => "male"
             ],
             [
-                "size_id" => 3,
+                "size_id" => 6,
                 "name" => "Sweatshirt",
                 "sex" => "male"
             ]

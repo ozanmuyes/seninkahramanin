@@ -58,6 +58,7 @@
             <div id="products_carousel" class="owl-carousel" data-owl='{"items": 6, "itemsMobile": 2, "pagination": false}'>
                 <?php $i = 0; ?>
                 @foreach ($products as $product)
+                    <?php #dd($product->images[0]); ?>
                     @include(
                         "partials.site.product",
                         [
@@ -65,8 +66,8 @@
                             "slug" => $product->slug,
                             "name" => $product->name,
                             "image" => [
-                                "path" => "model" . $i++ % 6 . ".jpg",
-                                "alt" => "product1 Image"
+                                "path" => $product->images[0]->path,
+                                "alt" => $product->images[0]->alt
                             ],
                             "_selectable" => !!$product->_selectable,
                             "_selectable_type" => $product->_selectable_type,

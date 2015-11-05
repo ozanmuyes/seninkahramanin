@@ -152,107 +152,108 @@ class ImagesTableSeeder extends Seeder
                     "id" => null
                 ]
             ],
-            [
-                "directory" => null,
-                "name" => "foo",
-                "extension" => "gif",
-                "title" => null,
-                "alt" => "Slider Image 1",
-                "width" => 1920,
-                "height" => 400,
-                "size" => 4096,
-                "user" => [
-                    "id" => null
-                ],
-                "slider" => [
-                    "id" => null,
-                    "order" => null,
-                    "title" => null,
-                    "subtitle" => null,
-                    "link" => null
-                ],
-                "product" => [
-                    "id" => 7
-                ]
-            ],
-            [
-                "directory" => null,
-                "name" => "bar",
-                "extension" => "gif",
-                "title" => null,
-                "alt" => "Slider Image 2",
-                "width" => 1920,
-                "height" => 400,
-                "size" => 4096,
-                "user" => [
-                    "id" => null
-                ],
-                "slider" => [
-                    "id" => 1,
-                    "order" => null,
-                    "title" => null,
-                    "subtitle" => null,
-                    "link" => null
-                ],
-                "product" => [
-                    "id" => null
-                ]
-            ],
-            [
-                "directory" => null,
-                "name" => "baz",
-                "extension" => "gif",
-                "title" => null,
-                "alt" => "Slider Image 3",
-                "width" => 1920,
-                "height" => 400,
-                "size" => 4096,
-                "user" => [
-                    "id" => null
-                ],
-                "slider" => [
-                    "id" => 1,
-                    "order" => null,
-                    "title" => null,
-                    "subtitle" => null,
-                    "link" => "//google.com"
-                ],
-                "product" => [
-                    "id" => null
-                ]
-            ],
-            [
-                "directory" => null,
-                "name" => "qux",
-                "extension" => "gif",
-                "title" => null,
-                "alt" => "Slider Image 4",
-                "width" => 1920,
-                "height" => 400,
-                "size" => 4096,
-                "user" => [
-                    "id" => null
-                ],
-                "slider" => [
-                    "id" => 1,
-                    "order" => null,
-                    "title" => null,
-                    "subtitle" => null,
-                    "link" => "//facebook.com"
-                ],
-                "product" => [
-                    "id" => null
-                ]
-            ],
+
+            // [
+            //     "directory" => null,
+            //     "name" => "foo",
+            //     "extension" => "gif",
+            //     "title" => null,
+            //     "alt" => "Slider Image 1",
+            //     "width" => 1920,
+            //     "height" => 400,
+            //     "size" => 4096,
+            //     "user" => [
+            //         "id" => null
+            //     ],
+            //     "slider" => [
+            //         "id" => null,
+            //         "order" => null,
+            //         "title" => null,
+            //         "subtitle" => null,
+            //         "link" => null
+            //     ],
+            //     "product" => [
+            //         "id" => 7
+            //     ]
+            // ],
+            // [
+            //     "directory" => null,
+            //     "name" => "bar",
+            //     "extension" => "gif",
+            //     "title" => null,
+            //     "alt" => "Slider Image 2",
+            //     "width" => 1920,
+            //     "height" => 400,
+            //     "size" => 4096,
+            //     "user" => [
+            //         "id" => null
+            //     ],
+            //     "slider" => [
+            //         "id" => 1,
+            //         "order" => null,
+            //         "title" => null,
+            //         "subtitle" => null,
+            //         "link" => null
+            //     ],
+            //     "product" => [
+            //         "id" => null
+            //     ]
+            // ],
+            // [
+            //     "directory" => null,
+            //     "name" => "baz",
+            //     "extension" => "gif",
+            //     "title" => null,
+            //     "alt" => "Slider Image 3",
+            //     "width" => 1920,
+            //     "height" => 400,
+            //     "size" => 4096,
+            //     "user" => [
+            //         "id" => null
+            //     ],
+            //     "slider" => [
+            //         "id" => 1,
+            //         "order" => null,
+            //         "title" => null,
+            //         "subtitle" => null,
+            //         "link" => "//google.com"
+            //     ],
+            //     "product" => [
+            //         "id" => null
+            //     ]
+            // ],
+            // [
+            //     "directory" => null,
+            //     "name" => "qux",
+            //     "extension" => "gif",
+            //     "title" => null,
+            //     "alt" => "Slider Image 4",
+            //     "width" => 1920,
+            //     "height" => 400,
+            //     "size" => 4096,
+            //     "user" => [
+            //         "id" => null
+            //     ],
+            //     "slider" => [
+            //         "id" => 1,
+            //         "order" => null,
+            //         "title" => null,
+            //         "subtitle" => null,
+            //         "link" => "//facebook.com"
+            //     ],
+            //     "product" => [
+            //         "id" => null
+            //     ]
+            // ],
 
             [
-                "directory" => null,
-                "name" => "product1",
+                "directory" => "products",
+                "name" => "female-athlete",
                 "extension" => "jpg",
-                "title" => "Product 1",
-                "alt" => "Product 1 Image",
-                "width" => 406,
-                "height" => 480,
+                "title" => "Female Athlete",
+                "alt" => "Female Athlete Image",
+                "width" => 284,
+                "height" => 359,
                 "size" => 36864,
                 "user" => [
                     "id" => null
@@ -269,14 +270,14 @@ class ImagesTableSeeder extends Seeder
                 ]
             ],
             [
-                "directory" => null,
-                "name" => "product2",
+                "directory" => "products",
+                "name" => "female-t-shirt",
                 "extension" => "jpg",
-                "title" => "Product 2",
-                "alt" => "Product 2 Image",
-                "width" => 404,
-                "height" => 480,
-                "size" => 4096,
+                "title" => "Female T-shirt",
+                "alt" => "Female T-shirt Image",
+                "width" => 284,
+                "height" => 359,
+                "size" => 36864,
                 "user" => [
                     "id" => null
                 ],
@@ -289,6 +290,98 @@ class ImagesTableSeeder extends Seeder
                 ],
                 "product" => [
                     "id" => 2
+                ]
+            ],
+            [
+                "directory" => "products",
+                "name" => "female-sweatshirt",
+                "extension" => "jpg",
+                "title" => "Female Sweatshirt",
+                "alt" => "Female Sweatshirt Image",
+                "width" => 284,
+                "height" => 359,
+                "size" => 36864,
+                "user" => [
+                    "id" => null
+                ],
+                "slider" => [
+                    "id" => null,
+                    "order" => null,
+                    "title" => null,
+                    "subtitle" => null,
+                    "link" => null
+                ],
+                "product" => [
+                    "id" => 3
+                ]
+            ],
+            [
+                "directory" => "products",
+                "name" => "male-athlete",
+                "extension" => "jpg",
+                "title" => "Male Athlete",
+                "alt" => "Male Athlete Image",
+                "width" => 284,
+                "height" => 359,
+                "size" => 36864,
+                "user" => [
+                    "id" => null
+                ],
+                "slider" => [
+                    "id" => null,
+                    "order" => null,
+                    "title" => null,
+                    "subtitle" => null,
+                    "link" => null
+                ],
+                "product" => [
+                    "id" => 4
+                ]
+            ],
+            [
+                "directory" => "products",
+                "name" => "male-t-shirt",
+                "extension" => "jpg",
+                "title" => "Male T-shirt",
+                "alt" => "Male T-shirt Image",
+                "width" => 284,
+                "height" => 359,
+                "size" => 36864,
+                "user" => [
+                    "id" => null
+                ],
+                "slider" => [
+                    "id" => null,
+                    "order" => null,
+                    "title" => null,
+                    "subtitle" => null,
+                    "link" => null
+                ],
+                "product" => [
+                    "id" => 5
+                ]
+            ],
+            [
+                "directory" => "products",
+                "name" => "male-sweatshirt",
+                "extension" => "jpg",
+                "title" => "Male Sweatshirt",
+                "alt" => "Male Sweatshirt Image",
+                "width" => 284,
+                "height" => 359,
+                "size" => 36864,
+                "user" => [
+                    "id" => null
+                ],
+                "slider" => [
+                    "id" => null,
+                    "order" => null,
+                    "title" => null,
+                    "subtitle" => null,
+                    "link" => null
+                ],
+                "product" => [
+                    "id" => 6
                 ]
             ]
         ];

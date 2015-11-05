@@ -19,8 +19,12 @@
         $imageAlt = $image["alt"];
     }
 
+    if (!isset($prefixImg)) {
+        $prefixImg = false;
+    }
+
     if (!preg_match("~^(?:f|ht)tps?://~i", $imagePath)) {
-        $imagePath = "img/" . trim($imagePath, "\/ ");
+        $imagePath = ($prefixImg ? "img/" : "") . trim($imagePath, "\/ ");
     }
 
     if (!isset($href)) {
