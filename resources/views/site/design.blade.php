@@ -25,6 +25,7 @@
                         "partials.site.product",
                         [
                             "name" => $sex->name,
+                            "prefixImg" => true,
                             "image" => [
                                 "path" => $sex->image->path,
                                 "alt" => $sex->image->alt
