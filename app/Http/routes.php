@@ -78,7 +78,7 @@ Route::group(
 
         Route::get("hakkimizda", ["as" => "AboutUs", "uses" => "SiteController@aboutUs"]);
 
-        Route::get("gizlilik-taahhudu", ["as" => "PrivacyCommitment", function () {
+        Route::get("gizlilik-taahhudu-ve-guvenlik-politikasi", ["as" => "PrivacyCommitment", function () {
             return view("site.privacy_commitment");
         }]);
 

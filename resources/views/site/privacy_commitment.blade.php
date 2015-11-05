@@ -5,7 +5,7 @@
 @section("content")
     <div class="row">
         <article class="col-md-6 col-md-offset-3">
-            <h1>Gizlilik Taahhüdü</h1>
+            <h1>Gizlilik Taahhüdü ve Gizlilik Politikası</h1>
 
             <ol>
                 <li>Kişisel bilgilerinize sadece siz ulaşabilirsiniz ve bu bilgiler üzerinde yalnızca siz değişiklik yapabilirsiniz. Üçüncü şahısların erişimlerine izin verilmeyecektir.</li>
@@ -16,11 +16,10 @@
                     İzniniz dışında e-posta adresinize sadece aşağıdaki hallerde elektronik posta gönderilebilir.
 
                     <ul>
-                        <li>Gizlilik Taahhüdünün değiştirilmesi</li>
-                        <li>Güvenlik Politikasının değiştirilmesi</li>
+                        <li>Gizlilik Taahhüdü ve Gizlilik Politikası değiştirilmesi</li>
                         <li>Teslimat Şartlarının değiştirilmesi</li>
                         <li>Üyelik Sözleşmenizin değiştirilmesi</li>
-                        <li>Tüketici Haklarındaki değişiklikler</li>
+                        <li>Tüketici Sözleşmesi değişiklikler</li>
                     </ul>
                 </li>
 
@@ -28,7 +27,7 @@
 
                 <li><b>seninkahramanin.com</b> adresine girmiş olduğunuz üyelik bilgileriniz, başta elektronik posta adresiniz, yazışma adresiniz, cep telefonu numaranız gibi bilgiler asla bir başka kurum/kuruluş ile paylaşılmaz.</li>
 
-                <li>Akça Saraylı Tekstil (ki <b>seninkahramanin.com</b> nin sahibi şirkettir) üyelik bilgilerinizi sadece idari/yasal zorunluluğun gerektirdiği durumlarda ilgili birime açıklayabilir. Araştırma ehliyeti belgelenmiş her türlü adli soruşturma dahilinde Akça Saraylı Tekstil , kendisinden istenen bilgiyi elinde bulunduruyorsa ilgili makama verebilir.</li>
+                <li><b>seninkahramanin.com</b> üyelik bilgilerinizi sadece idari/yasal zorunluluğun gerektirdiği durumlarda ilgili birime açıklayabilir. Araştırma ehliyeti belgelenmiş her türlü adli soruşturma dahilinde <b>seninkahramanin.com</b>, kendisinden istenen bilgiyi elinde bulunduruyorsa ilgili makama verebilir.</li>
 
                 <li>Üyelik bilgileriniz yalnızca <b>seninkahramanin.com</b> tarafından yürütülecek standart ürün teslim ve bilgilendirme prosedürleri çerçevesinde kullanılır. Bazı dönemlerde devreye girecek kampanya ve duyurular, sadece bunlardan haberdar olmak isteyen üyelerimize iletilir. Onayınız dışında kampanya bilgi mesajları içeren elektronik postalar almazsınız. Aksi durumları derhal şirketimize iletmeniz rica olunur.</li>
 

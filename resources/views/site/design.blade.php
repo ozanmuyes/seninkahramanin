@@ -169,7 +169,6 @@
                             "name" => "image",
                             "uploadButtonText" => "Resim Yükle",
                             "formSelector" => "form",
-                            "aspectRatio" => "16/9",
                             "autoCropArea" => 0.8
                         ]
                     )

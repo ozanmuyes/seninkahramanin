@@ -16,7 +16,7 @@
     }
 
     if (!isset($aspectRatio)) {
-        $aspectRatio = 1;
+        $aspectRatio = "NaN";
     }
 
     if (!isset($autoCropArea)) {
