@@ -84,7 +84,7 @@
                     </div>
 
                     <div class="col-md-4">
-                        <h1>Uzaklık</h1>
+                        <h1>Uzaklık ve Açı</h1>
 
                         <p>Tasarlanmasını istediğiniz fotoğrafın,petinizin tüm detaylarını tasarıma aktarabilmemiz adına peti cepheden gören bir açıda ve yakın planda çekilmiş olması gerekmektedir.Sol tarafta görmüş olduğunuz doğru ve yanlış örnekleri inceleyerek daha net bir fikir sahibi olabilirsiniz.</p>
                     </div>

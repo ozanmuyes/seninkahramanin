@@ -38,7 +38,7 @@
                             <div class="media-body">
                                 <h3>Fotoğrafını Çek</h3>
 
-                                <p>Evcil hayvanınızın yeni veya mevcut fotoğrafını FOTOĞRAF SEÇME REHBERİNDEKİ kriterleri de inceleyerek oluştur.</p>
+                                <p>Petinizin yeni veya mevcut fotoğrafını <a href="{{ route('Site.Guide') }}">FOTOĞRAF SEÇME REHBERİNDEKİ</a> kriterleri de inceleyerek oluştur.</p>
                             </div>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                     <div class="media shadow">
                         <div class="col-md-7 col-sm-12 col-xs-12">
                             <div class="media-body">
-                                <h3>Tasarımını Yap</h3>
+                                <h3>Tercihlerini Yap</h3>
 
                                 <p>Tasarla sayfasında sırasıyla; cinsiyet, ürün, beden, konuşma balonu (tercihe bağlı), petinizin ismi (tercihe bağlı) kısımlarından tercihlerinizi yapıp, son olarakta ürünün arkaplan rengini belirle.</p>
                             </div>
@@ -74,7 +74,7 @@
                             <div class="media-body">
                                 <h3>Giymeye Başla</h3>
 
-                                <p>Üstünde evcil hayvanının fotoğrafı olan t-shirt'ünü keyifle giy.</p>
+                                <p>Üstünde petin fotoğrafı olan t-shirt'ünü keyifle giy.</p>
                             </div>
                         </div>
                     </div>
