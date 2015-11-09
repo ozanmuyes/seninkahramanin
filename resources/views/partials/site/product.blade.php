@@ -42,6 +42,10 @@
     if (!isset($_selectable_name)) {
         $_selectable_name = null;
     }
+
+    if (!isset($price)) {
+        $price = false;
+    }
 ?>
 
 @if ($href !== null)
@@ -59,6 +63,9 @@
 
     <div class="info">
         <h4>{{ $name }}</h4>
+        @unless ($price === false)
+            <h5>{{ $price }} <i class="fa fa-try"></i></h5>
+        @endunless
 
         @if ($buttons)
             <hr>

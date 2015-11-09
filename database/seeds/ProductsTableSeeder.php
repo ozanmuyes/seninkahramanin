@@ -16,33 +16,33 @@ class ProductsTableSeeder extends Seeder
         $products = [
             [
                 "size_id" => 1,
-                "name" => "Kadın Atlet",
-                "sex" => "female"
+                "sex_id" => 0,
+                "name" => "Kadın Atlet"
             ],
             [
                 "size_id" => 2,
-                "name" => "Kadın Tişört",
-                "sex" => "female"
+                "sex_id" => 0,
+                "name" => "Kadın Tişört"
             ],
             [
                 "size_id" => 3,
-                "name" => "Kadın Sweatshirt",
-                "sex" => "female"
+                "sex_id" => 0,
+                "name" => "Kadın Sweatshirt"
             ],
             [
                 "size_id" => 4,
-                "name" => "Erkek Atlet",
-                "sex" => "male"
+                "sex_id" => 1,
+                "name" => "Erkek Atlet"
             ],
             [
                 "size_id" => 5,
-                "name" => "Erkek Tişört",
-                "sex" => "male"
+                "sex_id" => 1,
+                "name" => "Erkek Tişört"
             ],
             [
                 "size_id" => 6,
-                "name" => "Erkek Sweatshirt",
-                "sex" => "male"
+                "sex_id" => 1,
+                "name" => "Erkek Sweatshirt"
             ]
             // [
             //     "size_id" => 1,
@@ -109,8 +109,8 @@ class ProductsTableSeeder extends Seeder
         foreach ($products as $product) {
             Product::create([
                 "size_id" => $product["size_id"],
-                "name" => $product["name"],
-                "sex" => $product["sex"]
+                "sex_id" => $product["sex_id"],
+                "name" => $product["name"]
             ]);
         }
     }

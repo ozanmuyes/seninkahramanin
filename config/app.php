@@ -160,6 +160,7 @@ return [
         Ozanmuyes\Cart\CartServiceProvider::class,
         Artisaninweb\SoapWrapper\ServiceProvider::class,
         Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
+        Barryvdh\Cors\ServiceProvider::class,
 
     ],
 

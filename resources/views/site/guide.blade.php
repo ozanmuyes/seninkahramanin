@@ -101,19 +101,19 @@
 
                     <div class="col-md-4">
                         <div class="flat-box background-wrong">
-                            <img src="img/guide/alone-wrong-1-lg.jpg" alt="Birden fazla hayvanın fotoğrafı" class="img-responsive hidden-xs hidden-sm visible-md visible-lg">
-                            <img src="img/guide/alone-wrong-1-sm.jpg" alt="Birden fazla hayvanın fotoğrafı" class="img-responsive visible-xs visible-sm hidden-md hidden-lg">
+                            <img src="img/guide/alone-wrong-lg.jpg" alt="Birden fazla hayvanın fotoğrafı" class="img-responsive hidden-xs hidden-sm visible-md visible-lg">
+                            <img src="img/guide/alone-wrong-sm.jpg" alt="Birden fazla hayvanın fotoğrafı" class="img-responsive visible-xs visible-sm hidden-md hidden-lg">
 
-                            <p class="title padding-bottom-sm">Yanlış Örnek 1</p>
+                            <p class="title padding-bottom-sm">Yanlış Örnek</p>
                         </div>
                     </div>
 
                     <div class="col-md-4">
-                        <div class="flat-box background-wrong">
-                            <img src="img/guide/alone-wrong-2-lg.jpg" alt="Hayvanın sahibiyle fotoğrafı" class="img-responsive hidden-xs hidden-sm visible-md visible-lg">
-                            <img src="img/guide/alone-wrong-2-sm.jpg" alt="Hayvanın sahibiyle fotoğrafı" class="img-responsive visible-xs visible-sm hidden-md hidden-lg">
+                        <div class="flat-box background-right">
+                            <img src="img/guide/alone-right-lg.jpg" alt="Yalnız hayvan fotoğrafı" class="img-responsive hidden-xs hidden-sm visible-md visible-lg">
+                            <img src="img/guide/alone-right-sm.jpg" alt="Yalnız hayvan fotoğrafı" class="img-responsive visible-xs visible-sm hidden-md hidden-lg">
 
-                            <p class="title padding-bottom-sm">Yanlış Örnek 2</p>
+                            <p class="title padding-bottom-sm">Doğru Örnek</p>
                         </div>
                     </div>
                 </div>

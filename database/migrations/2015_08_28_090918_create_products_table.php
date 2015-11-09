@@ -15,9 +15,9 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
             $table->integer("size_id")->unsigned()->index();
+            $table->integer("sex_id")->unsigned()->index();
             $table->string("name", 128);
             $table->string("slug", 128);
-            $table->enum("sex", ["female", "male", "child (unisex)"]);
             $table->timestamps();
         });
     }

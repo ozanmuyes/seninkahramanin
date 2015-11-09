@@ -56,7 +56,8 @@
                                     {{-- <td>{{ $product["attributes"]["sex"]["name"] }}</td> --}}
                                     <td>{{ $product["quantity"] }}</td>
                                     <?php $total += $product["price"]; ?>
-                                    <td>{{ $product["price"] . " " . mb_strtoupper($product["attributes"]["currency"]) }}</td>
+                                    <td>{{ $product["price"]}} <i class="fa fa-try"></i></td>
+                                    {{-- <td>{{ $product["price"] . " " . mb_strtoupper($product["attributes"]["currency"]) }}</td> --}}
 
                                     <td>
                                         {{-- <button type="button" class="btn btn-default btn-sm">
@@ -74,30 +75,11 @@
 
                     <div class="total-page">
                         <div class="row">
-                            <div class="col-md-5">
-                                {!! Form::open(["class" => "form-inline"]) !!}
-                                    <div class="form-group">
-                                        <input type="text" placeholder="Kupon Kodu" class="form-control form-bow">
-                                    </div>
-
-                                    <br><br>
-
-                                    {!! Form::submit("Uygula", ["class" => "btn btn-success"]) !!}
-
-                                    <p class="help-block">Varsa indirim kuponu kodunuzu girin.</p>
-                                {!! Form::close() !!}
-                            </div>
-
-                            <div class="col-md-7 text-right">
+                            <div class="col-md-12 text-right">
                                 {{-- Eğer indirim yoksa h4'ü gizle --}}
                                 <h4>
-                                    Toplam: <s><?php printf("%.02f %s", $total, mb_strtoupper($product["attributes"]["currency"])) ?></s>
+                                    Toplam: <?php printf("%.02f %s", $total, '<i class="fa fa-try"></i>') ?>
                                 </h4>
-
-                                <h3>
-                                    {{-- CampaignController'dan indirimi hesaplattır --}}
-                                    İndirimli: <?php printf("%.02f %s", $total, mb_strtoupper($product["attributes"]["currency"])) ?>
-                                </h3>
                             </div>
                         </div>
 

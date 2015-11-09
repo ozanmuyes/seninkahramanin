@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Product;
+
 class ProductsController extends Controller
 {
     /**
@@ -15,7 +17,10 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        //
+        return [
+            "data" => Product::get(),
+            "meta" => []
+        ];
     }
 
     /**
@@ -47,7 +52,7 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        //
+        return Product::find($id);
     }
 
     /**

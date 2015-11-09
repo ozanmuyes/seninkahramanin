@@ -21,8 +21,8 @@
                 <div class="col-md-4">
                     <ul>
                         <li>Senİn Kahramanın</li>
-                        <li>Hayvan sever,</li>
-                        <li>Memnunİyetİnİze önem verİr.</li>
+                        <li><a href="//www.facebook.com/seninkahramanin">{!! Html::image("img/ikonlar/facebook_sm.jpg", "Facebook İkonu") !!} facebook.com/seninkahramanin</a></li>
+                        <li><a href="//www.instagram.com/seninkahramanin">{!! Html::image("img/ikonlar/instagram_sm.jpg", "Instagram İkonu") !!} instagram.com/seninkahramanin</a></li>
                     </ul>
                 </div>
             </div>

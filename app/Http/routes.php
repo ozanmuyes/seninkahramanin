@@ -240,19 +240,41 @@ Route::group(
     }
 );
 
-Route::group(
-    [
-        "prefix" => "api",
-        "namespace" => "Admin"
-    ],
-    function () {
-        Route::group(
-            [
-                "prefix" => "users"
-            ],
-            function () {
-                Route::get("is-email-unique", "UsersController@isEmailUnique");
-            }
-        );
-    }
-);
+// Route::group(
+//   [
+//     "namespace" => "Admin",
+//     "middleware" => "cors"
+//   ],
+//   function () {
+//     Route::post("contact-form", function () {
+//       return ["foo" => "bar"];
+//     });
+
+//     Route::get("products", "ProductsController@index");
+//     Route::get("products/{id}", "ProductsController@show");
+
+//     Route::get("sexes", function () {
+//       return [
+//         [
+//           "id" => 0,
+//           "name" => "Kadın",
+//           "image" => "female.jpg"
+//         ],
+//         [
+//           "id" => 1,
+//           "name" => "Erkek",
+//           "image" => "male.jpg"
+//         ]
+//       ];
+//     });
+
+//     Route::group(
+//       [
+//         "prefix" => "users"
+//       ],
+//       function () {
+//         Route::get("is-email-unique", "UsersController@isEmailUnique");
+//       }
+//     );
+//   }
+// );

@@ -70,6 +70,7 @@
                                 "path" => $product->images[0]->path,
                                 "alt" => $product->images[0]->alt
                             ],
+                            "price" => $product->price->withoutCurrency,
                             "_selectable" => !!$product->_selectable,
                             "_selectable_type" => $product->_selectable_type,
                             "_selectable_name" => $product->_selectable_name
@@ -87,6 +88,19 @@
                         <label for="product-size">Beden</label>
 
                         <select id="product-size" class="form-control"></select>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="input-group spinner">
+                        <label for="product-count">Adet</label>
+
+                        <input type="text" id="product-count" class="form-control" value="1">
+
+                        <div class="input-group-btn-vertical">
+                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -145,12 +159,12 @@
                         <div id="style-buttons" class="btn-group" data-toggle="buttons">
                             <label class="btn btn-default">
                                 <input type="radio" value="kalem" /> Kalem
-                                {!! Html::image("img/design/kalem.jpg", "Kalem", ["class" => "img-responsive"]) !!}
+                                {!! Html::image("img/design/kalem_wide.jpg", "Kalem", ["class" => "img-responsive"]) !!}
                             </label>
 
                             <label class="btn btn-default">
                                 <input type="radio" value="boya" /> Boya
-                                {!! Html::image("img/design/boya.jpg", "Kalem", ["class" => "img-responsive"]) !!}
+                                {!! Html::image("img/design/boya_wide.jpg", "Kalem", ["class" => "img-responsive"]) !!}
                             </label>
                         </div>
                     </div>
@@ -185,7 +199,8 @@
         <div class="col-md-8 col-md-offset-2">
             <h2>Siparişi Tamamlayın</h2>
             <br>
-            <a id="btnOrder" class="btn btn-success btn-lg" href="{{ route('Site.Design') }}" role="button">Sepete Ekle</a>
+            <a id="btnOrder" class="btn btn-success btn-lg btnOrder" href="{{ route('Site.Design') }}" role="button">Sepete Ekle</a>
+            <a id="btnOrderAndGo" class="btn btn-success btn-lg btnOrder" href="{{ route('Site.Design') }}" role="button">Sepete Ekle ve Git</a>
         </div>
     </section>
 @endsection
@@ -206,6 +221,10 @@
     {!! Html::script("js/colorpicker.js") !!}
 
     <script>
+        String.prototype.endsWith = function(suffix) {
+            return this.indexOf(suffix, this.length - suffix.length) !== -1;
+        };
+
         var order = {
             sex: {
                 name: null
@@ -255,7 +274,7 @@
                 $(window[$(this.parentElement).attr("for")]).trigger("owl.prev");
             });
 
-            $("#product-size").val("M");
+            $("#product-size").val("Lütfen cinsiyet seçin");
             $("input:checkbox").removeAttr("checked");
             $("#speech-baloon").prop("disabled", "disabled").val("");
             $("#pet-name").prop("disabled", "disabled").val("");
@@ -268,10 +287,14 @@
                 });
                 $this.addClass("selected");
 
+                if ($this.data("selectableType") == "sex") {
+                    initProductSizes($this.data("selectableName") == "Kadın" ? femaleProductSizes : maleProductSizes);
+                }
+
                 order[$this.data("selectableType")]["name"] = $this.data("selectableName");
             });
 
-            var productSizes = [
+            var femaleProductSizes = [
                 {
                     text: "XS",
                     value: 1,
@@ -295,21 +318,51 @@
                     value: 4,
                     selected: false,
                     description: "Göğüs: 55<br>Boy: 73"
+                }
+            ];
+            var maleProductSizes = [
+                {
+                    text: "S",
+                    value: 2,
+                    selected: false,
+                    description: "Göğüs: 51<br>Boy: 68"
+                },
+                {
+                    text: "M",
+                    value: 3,
+                    selected: true,
+                    description: "Göğüs: 53<br>Boy: 70"
+                },
+                {
+                    text: "L",
+                    value: 4,
+                    selected: false,
+                    description: "Göğüs: 55<br>Boy: 73"
                 },
                 {
                     text: "XL",
                     value: 5,
                     selected: false,
                     description: "Göğüs: 57<br>Boy: 75"
+                },
+                {
+                    text: "XXL",
+                    value: 5,
+                    selected: false,
+                    description: "Göğüs: 59<br>Boy: 77"
                 }
             ];
-            var $productSize = $("#product-size").ddslick({
-                data: productSizes,
-                // width: 400,
-                onSelected: function (selected) {
-                    order.product.size = selected.selectedData.value;
-                }
-            });
+            var initProductSizes = function (sizes) {
+                $("#product-size").ddslick("destroy");
+
+                var $productSize = $("#product-size").ddslick({
+                    data: sizes,
+                    // width: 400,
+                    onSelected: function (selected) {
+                        order.product.size = selected.selectedData.value;
+                    }
+                });
+            }
 
             $("#speech-baloon-enabled").click(function () {
                 $("#speech-baloon").prop("disabled", !this.checked);
@@ -342,7 +395,9 @@
                 }
             });
 
-            $("#btnOrder").click(function () {
+            $(".btnOrder").click(function () {
+                var goToCart = $(this).attr("id").endsWith("Go");
+
                 if (order.sex.name === null) {
                     alert("Lütfen cinsiyet seçimi yapın.");
 
@@ -380,7 +435,8 @@
                     contentType: "application/json",
                     complete: function (data, status, xhr) {
 // console.log(data);
-                        window.location = "/";
+                        window.location = (goToCart ? "/sepet" : "/");
+
                     },
                     beforeSend: function (xhr) {
                         xhr.setRequestHeader("X-CSRF-TOKEN", $("meta[name='token']").attr("content"));
