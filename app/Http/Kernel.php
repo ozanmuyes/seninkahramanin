@@ -13,10 +13,10 @@ class Kernel extends HttpKernel
      */
     protected $middleware = [
         \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
-        \App\Http\Middleware\EncryptCookies::class,
-        \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
-        \Illuminate\Session\Middleware\StartSession::class,
-        \Illuminate\View\Middleware\ShareErrorsFromSession::class,
+        // \App\Http\Middleware\EncryptCookies::class,
+        // \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
+        // \Illuminate\Session\Middleware\StartSession::class,
+        // \Illuminate\View\Middleware\ShareErrorsFromSession::class,
         // \App\Http\Middleware\VerifyCsrfToken::class,
     ];
 
@@ -36,5 +36,7 @@ class Kernel extends HttpKernel
 
         'admin' => \App\Http\Middleware\AtLeastAdmin::class,
         'no-cache' => \App\Http\Middleware\NoCache::class,
+        'json-api-before' => \App\Http\Middleware\JSONAPIBefore::class,
+        'json-api-after' => \App\Http\Middleware\JSONAPIAfter::class,
     ];
 }

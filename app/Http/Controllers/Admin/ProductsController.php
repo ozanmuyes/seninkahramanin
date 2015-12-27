@@ -17,10 +17,12 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        return [
-            "data" => Product::get(),
-            "meta" => []
-        ];
+        return Product::get();
+
+        // return [
+        //     "data" => Product::get(),
+        //     "meta" => []
+        // ];
     }
 
     /**

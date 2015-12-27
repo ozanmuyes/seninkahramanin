@@ -44,7 +44,7 @@ document.write(unescape("%3Cscript src='" + tlJsHost + "trustlogo/javascript/tru
     </head>
 
     <body>
-        @include("partials.site.header")
+        {{-- @include("partials.site.header") --}}
 
         <main class="container-fluid" role="main">
             <div class="row">
